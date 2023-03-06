@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: market
+    ports:
+      - 5432:5432
+
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/market
+      REDIS_URL: redis://redis:6379/0
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+
+  celery:
+    build: .
+    command: celery -A config worker -l info
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/market
+      REDIS_URL: redis://redis:6379/0
+
+  celery-beat:
+    build: .
+    command: celery -A config beat -l info
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/market
+      REDIS_URL: redis://redis:6379/0
+
+  redis:
+    image: redis
+    volumes:
+      - ./data/redis:/data
+
+  flower:
+    image: mher/flower:0.9.7
+    command: [ 'flower', '--broker:redis://redis:6379', '--port=5555' ]
+    expose:
+      - 5555
+    depends_on:
+      - celery
+      - redis

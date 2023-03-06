@@ -1,0 +1,5 @@
+.git
+.github
+db.sqlite3
+Pipenv
+Pipenv.lock

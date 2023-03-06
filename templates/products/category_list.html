@@ -1,0 +1,23 @@
+{% extends 'layouts/master.html' %}
+
+{% block content %}
+<h1>Categories</h1>
+
+<ul>
+  {% for category in categoryes %}
+    <li>
+      <a href="{% url 'products:category-detail' category.id %}">{{ category.name }}</a>
+      {% if category.children.count %}
+        <ul>
+          {% for child in category.children.all %}
+            <li>
+              <a href="{% url 'products:category-detail' child.id %}">{{ child.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}

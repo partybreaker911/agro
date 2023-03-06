@@ -1,0 +1,18 @@
+{% extends 'layouts/master.html' %}
+
+{% block content %}
+
+<h1>{{ category.name }}</h1>
+
+  {% if products %}
+    <h2>Products in {{ category.name }}</h2>
+    <ul>
+      {% for product in products %}
+        <li><a href="{% url 'products:product-detail' product.id %}">{{ product.name }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No products found in {{ category.name }}</p>
+  {% endif %}
+
+{% endblock content %}

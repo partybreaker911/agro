@@ -1,0 +1,16 @@
+{% extends 'layouts/master.html' %}
+
+
+{% block content %}
+    <table class="table">
+        <thead>
+            <th>Name</th>
+        </thead>
+        {% for product in object_list %}           
+        <tbody>
+            <td>{{ product.name }}</td>
+        </tbody>
+            {% endfor %}
+    </table>
+{% endblock content %}
+    

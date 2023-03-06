@@ -1,0 +1,15 @@
+{% extends 'layouts/master.html' %}
+
+{% load static crispy_forms_tags %}
+
+{% block content %}
+<h1>Categories</h1>
+
+<ul>
+<form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-primary" value="Save">
+</form>
+</ul>
+{% endblock content %}
