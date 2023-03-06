@@ -1,15 +1,18 @@
 import uuid
 from django.conf import settings
 from django.core.mail import send_mail
+from django.core import serializers
+from django.contrib import messages
+from django.http import JsonResponse
 from django.urls import reverse_lazy
-from django.views.generic import View, TemplateView
+from django.views.generic import View, TemplateView, FormView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.crypto import get_random_string
 from django.shortcuts import render, redirect
 
 from accounts.models import Profile, Wallet, ReferralCode
 from allauth.account.views import SignupView
-from accounts.forms import ProfileForm
+from accounts.forms import ProfileForm, ReferralForm
 from accounts.tasks import send_referral_email
 
 
@@ -56,6 +59,32 @@ class CustomSignupView(SignupView):
                 context["referral"] = referral
             except ReferralCode.DoesNotExist:
                 pass
+        return context
+
+
+class ReferralInviteView(LoginRequiredMixin, FormView):
+    form_class = ReferralForm
+    template_name = "accounts/referral_form.html"
+    success_url = reverse_lazy("referral_invite")
+
+    def form_valid(self, form):
+        email = form.cleaned_data["email"]
+        token = get_random_string(length=8)
+        invite = ReferralCode(user=self.request.user, email=email, code=token)
+        invite.save()
+        send_referral_email(self.request, invite.user.email)
+        messages.success(self.request, "Referral invite send!")
+        return JsonResponse({"status": "success"})
+
+    def form_invalid(self, form):
+        errors = form.errors.as_json()
+        return JsonResponse({"status": "error", "errors": errors})
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["referral_invites"] = serializers.serialize(
+            "json", ReferralCode.objects.filter(user=self.request.user)
+        )
         return context
 
 

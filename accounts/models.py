@@ -158,10 +158,11 @@ class ReferralCode(models.Model):
         unique=True,
         editable=False,
     )
-    user = models.OneToOneField(
+    user = models.ForeignKey(
         CustomUser, verbose_name=_("User refferal"), on_delete=models.CASCADE
     )
     code = models.CharField(_("Referral Code"), max_length=8)
+    email = models.EmailField(_("Invited Email"), max_length=254, blank=True, null=True)
     referred_user = models.ForeignKey(
         CustomUser,
         verbose_name=_("Referred"),

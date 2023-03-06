@@ -34,6 +34,12 @@ class ProfileForm(forms.ModelForm):
         )
 
 
+class ReferralForm(forms.Form):
+    email = forms.EmailField(
+        required=False,
+    )
+
+
 class ReferralSignupForm(SignupForm):
     referral_code = forms.CharField(required=False)
 

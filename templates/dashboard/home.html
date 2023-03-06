@@ -252,7 +252,8 @@
                         </div>
                     </div>
                     <div class="px-4">
-                        <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>Invite new user</button>
+                        <!-- TODO: delete this -->
+                        <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3' id="invite-referral-btn"><a href="{% url 'referral_invite' %}">Invite new user</a></button>
                     </div>
                 </div>
             </div>
@@ -273,4 +274,5 @@
 <!-- Need: Apexcharts -->
 <script src="{% static 'assets/extensions/apexcharts/apexcharts.min.js' %}"></script>
 <script src="{% static 'assets/js/pages/dashboard.js' %}"></script>
+<script src="{% static 'assets/js/referral_invite_popup.js' %}"></script>
 {% endblock %}
