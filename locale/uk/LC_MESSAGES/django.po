@@ -240,15 +240,15 @@ msgstr "Тiкет"
 
 #: support/models.py:31
 msgid "Reply ID"
-msgstr ""
+msgstr "ID Вiдповiдi"
 
 #: support/models.py:44 templates/support/ticket_detail.html:27
 msgid "Reply"
-msgstr ""
+msgstr "Вiповiдь"
 
 #: support/models.py:45
 msgid "Replyes"
-msgstr ""
+msgstr "Вiдповiдi"
 
 #: templates/account/login.html:13
 msgid "Log in."
