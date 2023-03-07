@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:03+0200\n"
+"POT-Creation-Date: 2023-03-07 23:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,7 +132,7 @@ msgstr "Мiтка часу"
 msgid "Deal"
 msgstr "Угода"
 
-#: deals/models.py:36
+#: deals/models.py:36 templates/dashboard/home.html:74
 msgid "Deals"
 msgstr "Угоди"
 
@@ -310,6 +310,14 @@ msgstr "Статистика профілю"
 msgid "Wallet balance"
 msgstr "Баланс гаманця"
 
+#: templates/dashboard/home.html:40
+msgid "Followers"
+msgstr "Пiдписникiв"
+
+#: templates/dashboard/home.html:57
+msgid "Following"
+msgstr "Пiдписан"
+
 #: templates/dashboard/home.html:86 templates/dashboard/home.html:98
 msgid "Profile Sells"
 msgstr "Профіль Продає"
@@ -330,11 +338,11 @@ msgstr "Нещодавно запрошені"
 msgid "No invited users yet"
 msgstr "Ще немає запрошених користувачів"
 
-#: templates/dashboard/home.html:276
+#: templates/dashboard/home.html:257
 msgid "Invite new user"
 msgstr "Запросити нового користувача"
 
-#: templates/dashboard/home.html:282
+#: templates/dashboard/home.html:263
 #, fuzzy
 #| msgid "Profile"
 msgid "Visitors Profile"
