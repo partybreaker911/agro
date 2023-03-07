@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 17:49+0200\n"
+"POT-Creation-Date: 2023-03-07 23:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,34 +95,6 @@ msgstr "Гаманець"
 msgid "Wallets"
 msgstr "Гаманцi"
 
-#: accounts/models.py:155
-msgid "Referral ID"
-msgstr "ID Реферала"
-
-#: accounts/models.py:162
-msgid "User refferal"
-msgstr "Реферал користувача"
-
-#: accounts/models.py:164 accounts/models.py:177
-msgid "Referral Code"
-msgstr "Промо код"
-
-#: accounts/models.py:165
-msgid "Invited Email"
-msgstr "Запрощенний iмейл"
-
-#: accounts/models.py:168
-msgid "Referred"
-msgstr "Реферальний користувач"
-
-#: accounts/models.py:174
-msgid "Created"
-msgstr "Створений"
-
-#: accounts/models.py:178
-msgid "Referral Codes"
-msgstr "Промо код"
-
 #: deals/models.py:15
 msgid "Buy"
 msgstr "Купити"
@@ -164,15 +136,15 @@ msgstr "Угода"
 msgid "Deals"
 msgstr "Угоди"
 
-#: market/settings.py:159
+#: market/settings.py:161
 msgid "Russian"
 msgstr "Руский"
 
-#: market/settings.py:160
+#: market/settings.py:162
 msgid "Ukrainian"
 msgstr "Украiнська"
 
-#: market/settings.py:161
+#: market/settings.py:163
 msgid "English"
 msgstr "Англiйська"
 
@@ -249,7 +221,13 @@ msgstr "Авторизуватися"
 msgid "Dont have an account?"
 msgstr "Немає облікового запису?"
 
-#: templates/account/login.html:44
+#: templates/account/login.html:42
+#, fuzzy
+#| msgid "Sign Up"
+msgid "Signup"
+msgstr "Зареєструватися"
+
+#: templates/account/login.html:43
 msgid "Forgot password?"
 msgstr "Забули пароль?"
 
@@ -264,6 +242,12 @@ msgstr "Введіть свої дані для реєстрації на наш
 #: templates/account/signup.html:46
 msgid "Already have an account?"
 msgstr "Вже є аккаунт?"
+
+#: templates/account/signup.html:46
+#, fuzzy
+#| msgid "Log in."
+msgid "Log in"
+msgstr "Авторизуватися"
 
 #: templates/account/verification_sent.html:10
 msgid "Verify Your E-mail Address"
@@ -342,9 +326,19 @@ msgstr "Створити нову угоду"
 msgid "Recent Invited"
 msgstr "Нещодавно запрошені"
 
-#: templates/dashboard/home.html:265
+#: templates/dashboard/home.html:251
+msgid "No invited users yet"
+msgstr "Ще немає запрошених користувачів"
+
+#: templates/dashboard/home.html:276
 msgid "Invite new user"
 msgstr "Запросити нового користувача"
+
+#: templates/dashboard/home.html:282
+#, fuzzy
+#| msgid "Profile"
+msgid "Visitors Profile"
+msgstr "Профiль користувача"
 
 #: templates/layouts/sidebar.html:43
 msgid "Menu"
@@ -353,3 +347,24 @@ msgstr "Меню"
 #: templates/layouts/sidebar.html:64
 msgid "Prices"
 msgstr "Ціни"
+
+#~ msgid "Referral ID"
+#~ msgstr "ID Реферала"
+
+#~ msgid "User refferal"
+#~ msgstr "Реферал користувача"
+
+#~ msgid "Referral Code"
+#~ msgstr "Промо код"
+
+#~ msgid "Invited Email"
+#~ msgstr "Запрощенний iмейл"
+
+#~ msgid "Referred"
+#~ msgstr "Реферальний користувач"
+
+#~ msgid "Created"
+#~ msgstr "Створений"
+
+#~ msgid "Referral Codes"
+#~ msgstr "Промо код"
