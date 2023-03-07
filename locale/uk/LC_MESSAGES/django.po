@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 16:56+0200\n"
+"POT-Creation-Date: 2023-03-07 17:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -123,6 +123,14 @@ msgstr "Створений"
 msgid "Referral Codes"
 msgstr "Промо код"
 
+#: deals/models.py:15
+msgid "Buy"
+msgstr "Купити"
+
+#: deals/models.py:16
+msgid "Sell"
+msgstr "Продати"
+
 #: deals/models.py:19
 msgid "Deal ID"
 msgstr "ID Угоди"
@@ -156,15 +164,15 @@ msgstr "Угода"
 msgid "Deals"
 msgstr "Угоди"
 
-#: market/settings.py:158
+#: market/settings.py:159
 msgid "Russian"
 msgstr "Руский"
 
-#: market/settings.py:159
+#: market/settings.py:160
 msgid "Ukrainian"
 msgstr "Украiнська"
 
-#: market/settings.py:160
+#: market/settings.py:161
 msgid "English"
 msgstr "Англiйська"
 
@@ -231,7 +239,7 @@ msgstr "Вітаємо, ви успішно придбали цей продук
 
 #: templates/account/login.html:13
 msgid "Log in."
-msgstr ""
+msgstr "Авторизуватися"
 
 #: templates/account/login.html:14
 msgid "Log in with your data that you entered during registration."
@@ -268,15 +276,15 @@ msgid ""
 "your main inbox, check your spam folder. Please contact us if you do not "
 "receive the verification e-mail within a few minutes."
 msgstr ""
-"Ми надіслали вам електронний лист для перевірки. Перейдіть за посиланням, наданим на "
-"завершіть процес реєстрації. Якщо ви не бачите електронного листа для підтвердження в "
-"вашу основну папку Вхідні, перевірте папку спаму. Будь ласка, зв'яжіться з нами, якщо ви цього не зробите "
-"отримайте електронний лист підтвердження протягом кількох хвилин."
+"Ми надіслали вам електронний лист для перевірки. Перейдіть за посиланням, "
+"наданим на завершіть процес реєстрації. Якщо ви не бачите електронного листа "
+"для підтвердження в вашу основну папку Вхідні, перевірте папку спаму. Будь "
+"ласка, зв'яжіться з нами, якщо ви цього не зробите отримайте електронний "
+"лист підтвердження протягом кількох хвилин."
 
 #: templates/accounts/profile.html:11 templates/accounts/profile.html:46
 msgid "Profile info"
 msgstr "Інформація про профіль"
-
 
 #: templates/accounts/profile.html:16 templates/layouts/sidebar.html:47
 msgid "Dashboard"

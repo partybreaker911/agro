@@ -12,8 +12,8 @@ class Deal(models.Model):
     BUY = "B"
     SELL = "S"
     DEAL_TYPE_CHOICES = [
-        (BUY, "Buy"),
-        (SELL, "Sell"),
+        (BUY, _("Buy")),
+        (SELL, _("Sell")),
     ]
     id = models.UUIDField(
         _("Deal ID"), primary_key=True, default=uuid.uuid4, unique=True, editable=False

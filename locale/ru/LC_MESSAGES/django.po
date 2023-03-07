@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 16:56+0200\n"
+"POT-Creation-Date: 2023-03-07 17:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -123,6 +123,14 @@ msgstr "Создан"
 msgid "Referral Codes"
 msgstr "Реферальные коды"
 
+#: deals/models.py:15
+msgid "Buy"
+msgstr "Покупка"
+
+#: deals/models.py:16
+msgid "Sell"
+msgstr "Продажа"
+
 #: deals/models.py:19
 msgid "Deal ID"
 msgstr "ID Сделки"
@@ -156,15 +164,15 @@ msgstr "Сделка"
 msgid "Deals"
 msgstr "Сделки"
 
-#: market/settings.py:158
+#: market/settings.py:159
 msgid "Russian"
 msgstr "Русский"
 
-#: market/settings.py:159
+#: market/settings.py:160
 msgid "Ukrainian"
 msgstr "Украинский"
 
-#: market/settings.py:160
+#: market/settings.py:161
 msgid "English"
 msgstr "Английский"
 
@@ -268,10 +276,11 @@ msgid ""
 "your main inbox, check your spam folder. Please contact us if you do not "
 "receive the verification e-mail within a few minutes."
 msgstr ""
-"Мы отправили вам электронное письмо для проверки. Перейдите по ссылке, указанной на "
-"завершить процесс регистрации. Если вы не видите письмо с подтверждением в "
-"Ваш основной почтовый ящик, проверьте папку со спамом. Пожалуйста, свяжитесь с нами, если вы этого не сделаете"
-"получить подтверждение по электронной почте в течение нескольких минут."
+"Мы отправили вам электронное письмо для проверки. Перейдите по ссылке, "
+"указанной на завершить процесс регистрации. Если вы не видите письмо с "
+"подтверждением в Ваш основной почтовый ящик, проверьте папку со спамом. "
+"Пожалуйста, свяжитесь с нами, если вы этого не сделаетеполучить "
+"подтверждение по электронной почте в течение нескольких минут."
 
 #: templates/accounts/profile.html:11 templates/accounts/profile.html:46
 msgid "Profile info"
