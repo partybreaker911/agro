@@ -28,6 +28,7 @@ class Deal(models.Model):
     )
     quantity = models.PositiveIntegerField(_("Quantity"), default=0)
     type = models.CharField(_("Type"), max_length=1, choices=DEAL_TYPE_CHOICES)
+    approved = models.BooleanField(_("Approved"), default=False)
     timestamp = models.DateTimeField(_("Timestamp"), auto_now_add=True)
 
     class Meta:
@@ -35,4 +36,4 @@ class Deal(models.Model):
         verbose_name_plural = _("Deals")
 
     def __str__(self) -> str:
-        return f"{self.user} {self.product} {self.quantity}"
+        return f"{self.user} {self.product} {self.quantity} {self.approved}"

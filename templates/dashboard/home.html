@@ -170,6 +170,7 @@
                                             <th>Product</th>
                                             <th>Type</th>
                                             <th>Quantity</th>
+                                            <th>Approved</th>
                                             <th>Timestamp</th>
                                         </tr>
                                     </thead>
@@ -189,6 +190,15 @@
                                             </td>
                                             <td class="col-auto">
                                                 <p class=" mb-0">{{ deal.quantity }}</p>
+                                            </td>
+                                            <td> 
+                                                
+                                                {% if deal.approved is True %}
+                                                    <p class="mb-0"><span class="badge bg-success">{{ deal.approved }}</span></p>
+                                                    {% else %}
+                                                    <p class="mb-0"><span class="badge bg-danger">{{ deal.approved }}</span></p>
+                                                {% endif %}
+                            
                                             </td>
                                             <td class="col-auto">
                                                 <p class="mb-0"> {{ deal.timestamp }}</p>

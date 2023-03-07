@@ -23,5 +23,9 @@ class DealCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy("deal_list")
 
     def form_valid(self, form):
+        deal = form.save(commit=False)
         form.instance.user = self.request.user
+        if self.request.user.is_staff:
+            deal.approved = True
+        deal.save()
         return super().form_valid(form)
