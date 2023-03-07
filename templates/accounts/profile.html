@@ -1,20 +1,20 @@
 {% extends 'layouts/master.html' %}
 
-{% load static crispy_forms_tags %}
+{% load static crispy_forms_tags i18n %}
 
 {% block content %}
 <div class="page-heading">
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Profile</h3>
-                <p class="text-subtitle text-muted">Profile info</p>
+                <h3>{% trans 'Profile' %}</h3>
+                <p class="text-subtitle text-muted">{% trans 'Profile info' %}</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Dashboard' %}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{% trans 'Profile' %}</li>
                     </ol>
                 </nav>
             </div>
@@ -26,7 +26,7 @@
             <div class="col-md-6 col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Avatar</h4>
+                        <h4 class="card-title">{% trans 'Avatar' %}</h4>
                     </div>
                     <div class="card-content">
                         <div class="card-body">
@@ -35,7 +35,7 @@
                                     <img src="{% static 'assets/images/faces/2.jpg' %}">
                                 </span>
                             </div>
-                            <button class="btn btn-primary">Upload</button>
+                            <button class="btn btn-primary">{% trans 'Upload' %}</button>
                         </div>
                     </div>
                 </div>
@@ -43,14 +43,14 @@
             <div class="col-md-6 col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Profile info</h4>
+                        <h4 class="card-title">{% trans 'Profile info' %}</h4>
                     </div>
                     <div class="card-content">
                         <div class="card-body">
                             <form class="form form-horizontal" method="POST">
                                 {% csrf_token %}
                                 {{ form|crispy }}
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">{% trans 'Save' %}</button>
                             </form>
                         </div>
                     </div>

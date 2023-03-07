@@ -1,10 +1,10 @@
 {% extends 'layouts/master.html' %}
 
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
 <div class="page-heading">
-    <h3>Profile Statistics</h3>
+    <h3>{% trans 'Profile Statistics' %}</h3>
 </div>
 <div class="page-content">
     <section class="row">
@@ -20,7 +20,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                    <h6 class="text-muted font-semibold">Wallet balance</h6>
+                                    <h6 class="text-muted font-semibold">{% trans 'Wallet balance' %}</h6>
                                     <h6 class="font-extrabold mb-0">{{ wallet.balance }} $</h6>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Profile Sells</h4>
+                            <h4>{% trans 'Profile Sells' %}</h4>
                         </div>
                         <div class="card-body">
                             <div id="chart-profile-visit"></div>
@@ -95,7 +95,7 @@
                 <div class="col-12 col-xl-4">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Profile Sells</h4>
+                            <h4>{% trans 'Profile Sells' %}</h4>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -158,8 +158,8 @@
                 <div class="col-12 col-xl-8">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-header d-flex justify-content-between align-items-center">Latest Deals
-                            <a class="btn btn-primary" href="{% url 'deal_create' %}">Create New Deal</a>
+                            <h4 class="card-header d-flex justify-content-between align-items-center">{% trans 'Latest Deals' %}
+                            <a class="btn btn-primary" href="{% url 'deal_create' %}">{% trans 'Create New Deal' %}</a>
                             </h4>
                         </div>
                         <div class="card-body">
@@ -167,11 +167,11 @@
                                 <table class="table table-hover table-lg">
                                     <thead>
                                         <tr>
-                                            <th>Product</th>
-                                            <th>Type</th>
-                                            <th>Quantity</th>
-                                            <th>Approved</th>
-                                            <th>Timestamp</th>
+                                            <th>{% trans 'Product' %}</th>
+                                            <th>{% trans 'Type' %}</th>
+                                            <th>{% trans 'Quantity' %}</th>
+                                            <th>{% trans 'Approved' %}</th>
+                                            <th>{% trans 'Timestamp'%}</th>
                                         </tr>
                                     </thead>
                                     <tbody>    
@@ -229,7 +229,7 @@
             </div>
             <div class="card">
                 <div class="card-header">
-                    <h4>Recent Invited</h4>
+                    <h4>{% trans 'Recent Invited'%}</h4>
                 </div>
                 <div class="card-content pb-4">
                     <div class="recent-message d-flex px-4 py-3">
@@ -261,7 +261,7 @@
                     </div>
                     <div class="px-4">
                         <!-- TODO: delete this -->
-                        <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3' id="invite-referral-btn"><a href="{% url 'referral_invite' %}">Invite new user</a></button>
+                        <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3' id="invite-referral-btn"><a href="{% url 'referral_invite' %}">{% trans 'Invite new user' %}</a></button>
                     </div>
                 </div>
             </div>

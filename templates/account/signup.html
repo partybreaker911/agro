@@ -1,6 +1,6 @@
 {% extends 'layouts/auth.html' %}
 
-{% load static crispy_forms_tags %}
+{% load static crispy_forms_tags i18n %}
 
 
 {% block content %}
@@ -10,8 +10,8 @@
             <div class="auth-logo">
                 <a href="index.html"><img src="{% static 'assets/images/logo/logo.svg' %}" alt="Logo"></a>
             </div>
-            <h1 class="auth-title">Sign Up</h1>
-            <p class="auth-subtitle mb-5">Input your data to register to our website.</p>
+            <h1 class="auth-title">{% trans 'Sign Up' %}</h1>
+            <p class="auth-subtitle mb-5">{% trans 'Input your data to register to our website.' %}</p>
 
             <form method="POST">
                 {% csrf_token %}
@@ -40,11 +40,11 @@
                         <i class="bi bi-shield-lock"></i>
                     </div>
                 </div> -->
-                <button type="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Sign Up</button>
+                <button type="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">{% trans 'Sign Up' %}</button>
             </form>
             <div class="text-center mt-5 text-lg fs-4">
-                <p class='text-gray-600'>Already have an account? <a href="{% url 'account_login' %}" class="font-bold">Log
-                        in</a>.</p>
+                <p class='text-gray-600'>{% trans 'Already have an account?' %}<a href="{% url 'account_login' %}" class="font-bold"> {% trans 'Log
+                        in' %}</a>.</p>
             </div>
         </div>
     </div>

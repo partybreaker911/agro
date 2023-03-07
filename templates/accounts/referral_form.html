@@ -1,16 +1,16 @@
 {% extends 'layouts/master.html' %}
-{% load static %}
+{% load static i18n %}
 {% block content %}
 <div id="referral-invite-popup">
-    <h2>Invite Referral Users</h2>
+    <h2>{% trans 'Invite Referral Users' %}</h2>
     <form id="referral-invite-form" action="{% url 'referral_invite' %}" method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit" class="btn btn-primary">Send Invite</button>
+      <button type="submit" class="btn btn-primary">{% trans 'Send Invite' %}</button>
     </form>
-    <div id="referral-invite-success" style="display: none;">Referral invite sent!</div>
+    <div id="referral-invite-success" style="display: none;">{% trans 'Referral invite sent!' %}</div>
     <div id="referral-invite-error" style="display: none; color: red;"></div>
-    <button id="close-referral-invite-popup" class="btn btn-secondary">Close</button>
+    <button id="close-referral-invite-popup" class="btn btn-secondary">{% trans 'Close' %}</button>
   </div>
 {% endblock %}
 

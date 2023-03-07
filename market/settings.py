@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 import environ
+from django.utils.translation import gettext_lazy as _
+
 
 env = environ.Env(
     # set casting, default value
@@ -150,7 +152,13 @@ REST_FRAMEWORK = {
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ru"
+
+LANGUAGES = (
+    (("ru"), _("Russian")),
+    (("uk"), _("Ukrainian")),
+    (("en-us"), _("English")),
+)
 
 TIME_ZONE = "UTC"
 
@@ -158,6 +166,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+USE_L10N = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/

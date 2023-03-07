@@ -1,0 +1,347 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-07 16:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: accounts/models.py:19
+msgid "User ID"
+msgstr "ID Користувача"
+
+#: accounts/models.py:28
+msgid "Location ID"
+msgstr "ID Населеного пункта"
+
+#: accounts/models.py:34 accounts/models.py:37 accounts/models.py:67
+#: products/models.py:78
+msgid "Location"
+msgstr "Населений пункт"
+
+#: accounts/models.py:38
+msgid "Locations"
+msgstr "Населенi пункти"
+
+#: accounts/models.py:46
+msgid "Profile ID"
+msgstr "ID Профiля"
+
+#: accounts/models.py:53 accounts/models.py:138 deals/models.py:21
+msgid "User"
+msgstr "Користувач"
+
+#: accounts/models.py:55
+msgid "First Name"
+msgstr "Iм'я"
+
+#: accounts/models.py:56
+msgid "Middle Name"
+msgstr "Призвище"
+
+#: accounts/models.py:57
+msgid "Last Name"
+msgstr "Побатьковi"
+
+#: accounts/models.py:59
+msgid "Birth Date"
+msgstr "Дата народження"
+
+#: accounts/models.py:63
+msgid "Phone"
+msgstr "Телефон"
+
+#: accounts/models.py:64
+msgid "Address"
+msgstr "Адреса"
+
+#: accounts/models.py:74 templates/accounts/profile.html:10
+#: templates/accounts/profile.html:17
+msgid "Profile"
+msgstr "Профiль користувача"
+
+#: accounts/models.py:75
+msgid "Profiles"
+msgstr "Профiлi користувачiв"
+
+#: accounts/models.py:131
+msgid "Wallet ID"
+msgstr "ID Гаманеця"
+
+#: accounts/models.py:141
+msgid "Balence"
+msgstr "Баланс"
+
+#: accounts/models.py:143
+msgid "Updated"
+msgstr "Оновлено"
+
+#: accounts/models.py:146
+msgid "Wallet"
+msgstr "Гаманець"
+
+#: accounts/models.py:147
+msgid "Wallets"
+msgstr "Гаманцi"
+
+#: accounts/models.py:155
+msgid "Referral ID"
+msgstr "ID Реферала"
+
+#: accounts/models.py:162
+msgid "User refferal"
+msgstr "Реферал користувача"
+
+#: accounts/models.py:164 accounts/models.py:177
+msgid "Referral Code"
+msgstr "Промо код"
+
+#: accounts/models.py:165
+msgid "Invited Email"
+msgstr "Запрощенний iмейл"
+
+#: accounts/models.py:168
+msgid "Referred"
+msgstr "Реферальний користувач"
+
+#: accounts/models.py:174
+msgid "Created"
+msgstr "Створений"
+
+#: accounts/models.py:178
+msgid "Referral Codes"
+msgstr "Промо код"
+
+#: deals/models.py:19
+msgid "Deal ID"
+msgstr "ID Угоди"
+
+#: deals/models.py:27 products/models.py:46 products/models.py:52
+#: products/models.py:75 templates/dashboard/home.html:170
+msgid "Product"
+msgstr "Продукт"
+
+#: deals/models.py:29 templates/dashboard/home.html:172
+msgid "Quantity"
+msgstr "Кiлькiсть"
+
+#: deals/models.py:30 templates/dashboard/home.html:171
+msgid "Type"
+msgstr "Тип"
+
+#: deals/models.py:31 templates/dashboard/home.html:173
+msgid "Approved"
+msgstr "Затверджено"
+
+#: deals/models.py:32 templates/dashboard/home.html:174
+msgid "Timestamp"
+msgstr "Мiтка часу"
+
+#: deals/models.py:35
+msgid "Deal"
+msgstr "Угода"
+
+#: deals/models.py:36
+msgid "Deals"
+msgstr "Угоди"
+
+#: market/settings.py:158
+msgid "Russian"
+msgstr "Руский"
+
+#: market/settings.py:159
+msgid "Ukrainian"
+msgstr "Украiнська"
+
+#: market/settings.py:160
+msgid "English"
+msgstr "Англiйська"
+
+#: products/models.py:11
+msgid "Category ID"
+msgstr "Категорiя"
+
+#: products/models.py:17
+msgid "Name"
+msgstr "Iм'я"
+
+#: products/models.py:20
+msgid "Parent"
+msgstr "Родитель"
+
+#: products/models.py:28 products/models.py:44
+#: templates/layouts/sidebar.html:58
+msgid "Category"
+msgstr "Категорiя"
+
+#: products/models.py:29
+msgid "Categoryes"
+msgstr "Категорii"
+
+#: products/models.py:37
+msgid "Product ID"
+msgstr "ID Продукта"
+
+#: products/models.py:48
+msgid "Sold Count"
+msgstr "Продана кiлькiсть"
+
+#: products/models.py:53
+msgid "Products"
+msgstr "Продукти"
+
+#: products/models.py:68
+msgid "Product Price ID"
+msgstr "ID Цiни на продукт"
+
+#: products/models.py:80
+msgid "Price"
+msgstr "Цiна"
+
+#: products/models.py:84
+msgid "Product Price"
+msgstr "Цiна на продукт"
+
+#: products/models.py:85
+msgid "Product Prices"
+msgstr "Цiни на продукти"
+
+#: products/views.py:104
+msgid "This product is not available in your location."
+msgstr "Цей продукт недоступний у вашому регіоні."
+
+#: products/views.py:109
+msgid "You don't have enough points to purchase this product."
+msgstr "У вас недостатньо грошей, щоб купити цей товар."
+
+#: products/views.py:118
+msgid "Congratulations, you have successfully purchased this product."
+msgstr "Вітаємо, ви успішно придбали цей продукт."
+
+#: templates/account/login.html:13
+msgid "Log in."
+msgstr ""
+
+#: templates/account/login.html:14
+msgid "Log in with your data that you entered during registration."
+msgstr "Авторизуватися"
+
+#: templates/account/login.html:42
+msgid "Dont have an account?"
+msgstr "Немає облікового запису?"
+
+#: templates/account/login.html:44
+msgid "Forgot password?"
+msgstr "Забули пароль?"
+
+#: templates/account/signup.html:13 templates/account/signup.html:43
+msgid "Sign Up"
+msgstr "Зареєструватися"
+
+#: templates/account/signup.html:14
+msgid "Input your data to register to our website."
+msgstr "Введіть свої дані для реєстрації на нашому сайті."
+
+#: templates/account/signup.html:46
+msgid "Already have an account?"
+msgstr "Вже є аккаунт?"
+
+#: templates/account/verification_sent.html:10
+msgid "Verify Your E-mail Address"
+msgstr "Перевірте свою адресу електронної пошти"
+
+#: templates/account/verification_sent.html:11
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. If you do not see the verification e-mail in "
+"your main inbox, check your spam folder. Please contact us if you do not "
+"receive the verification e-mail within a few minutes."
+msgstr ""
+"Ми надіслали вам електронний лист для перевірки. Перейдіть за посиланням, наданим на "
+"завершіть процес реєстрації. Якщо ви не бачите електронного листа для підтвердження в "
+"вашу основну папку "Вхідні", перевірте папку спаму. Будь ласка, зв'яжіться з нами, якщо ви цього не зробите "
+"отримайте електронний лист підтвердження протягом кількох хвилин."
+
+#: templates/accounts/profile.html:11 templates/accounts/profile.html:46
+msgid "Profile info"
+msgstr "Інформація про профіль"
+
+
+#: templates/accounts/profile.html:16 templates/layouts/sidebar.html:47
+msgid "Dashboard"
+msgstr "Панель"
+
+#: templates/accounts/profile.html:29
+msgid "Avatar"
+msgstr "Аватар"
+
+#: templates/accounts/profile.html:38
+msgid "Upload"
+msgstr "Завантажити"
+
+#: templates/accounts/profile.html:53 templates/deal/deal_create.html:9
+msgid "Save"
+msgstr ""
+
+#: templates/accounts/referral_form.html:5
+msgid "Invite Referral Users"
+msgstr "Зберегти"
+
+#: templates/accounts/referral_form.html:9
+msgid "Send Invite"
+msgstr "Надіслати запрошення"
+
+#: templates/accounts/referral_form.html:11
+msgid "Referral invite sent!"
+msgstr "Запрошення для рекомендації надіслано!"
+
+#: templates/accounts/referral_form.html:13
+msgid "Close"
+msgstr "Закрити"
+
+#: templates/dashboard/home.html:7
+msgid "Profile Statistics"
+msgstr "Статистика профілю"
+
+#: templates/dashboard/home.html:23
+msgid "Wallet balance"
+msgstr "Баланс гаманця"
+
+#: templates/dashboard/home.html:86 templates/dashboard/home.html:98
+msgid "Profile Sells"
+msgstr "Профіль Продає"
+
+#: templates/dashboard/home.html:161
+msgid "Latest Deals"
+msgstr "Останні пропозиції"
+
+#: templates/dashboard/home.html:162
+msgid "Create New Deal"
+msgstr "Створити нову угоду"
+
+#: templates/dashboard/home.html:233
+msgid "Recent Invited"
+msgstr "Нещодавно запрошені"
+
+#: templates/dashboard/home.html:265
+msgid "Invite new user"
+msgstr "Запросити нового користувача"
+
+#: templates/layouts/sidebar.html:43
+msgid "Menu"
+msgstr "Меню"
+
+#: templates/layouts/sidebar.html:64
+msgid "Prices"
+msgstr "Ціни"
