@@ -18,6 +18,7 @@ psycopg2-binary = "*"
 django-mptt = "*"
 django-autocomplete-light = "*"
 django-invitations = "*"
+pillow = "*"
 
 [dev-packages]
 black = "*"

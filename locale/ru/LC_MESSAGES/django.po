@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:09+0200\n"
+"POT-Creation-Date: 2023-03-07 23:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,7 @@ msgid "Profile ID"
 msgstr "ID Профиля"
 
 #: accounts/models.py:53 accounts/models.py:138 deals/models.py:21
+#: support/models.py:14
 msgid "User"
 msgstr "Пользователь"
 
@@ -109,6 +110,7 @@ msgstr "ID Сделки"
 
 #: deals/models.py:27 products/models.py:46 products/models.py:52
 #: products/models.py:75 templates/dashboard/home.html:170
+#: templates/support/ticket_list.html:109
 msgid "Product"
 msgstr "Продукт"
 
@@ -124,7 +126,7 @@ msgstr "Тип"
 msgid "Approved"
 msgstr "Подтвержден"
 
-#: deals/models.py:32 templates/dashboard/home.html:174
+#: deals/models.py:32 support/models.py:18 templates/dashboard/home.html:174
 msgid "Timestamp"
 msgstr "Дата и время"
 
@@ -136,15 +138,15 @@ msgstr "Сделка"
 msgid "Deals"
 msgstr "Сделки"
 
-#: market/settings.py:161
+#: market/settings.py:162
 msgid "Russian"
 msgstr "Русский"
 
-#: market/settings.py:162
+#: market/settings.py:163
 msgid "Ukrainian"
 msgstr "Украинский"
 
-#: market/settings.py:163
+#: market/settings.py:164
 msgid "English"
 msgstr "Английский"
 
@@ -209,6 +211,26 @@ msgstr "У вас на счету не хватает денег"
 msgid "Congratulations, you have successfully purchased this product."
 msgstr "Поздравляем, Вы успешно купили продукт"
 
+#: support/models.py:12
+msgid "Message ID"
+msgstr ""
+
+#: support/models.py:15 templates/support/ticket_list.html:164
+msgid "Subject"
+msgstr ""
+
+#: support/models.py:16 support/models.py:22
+msgid "Message"
+msgstr ""
+
+#: support/models.py:17
+msgid "Image"
+msgstr ""
+
+#: support/models.py:23
+msgid "Messages"
+msgstr ""
+
 #: templates/account/login.html:13
 msgid "Log in."
 msgstr "Вход"
@@ -271,6 +293,7 @@ msgid "Profile info"
 msgstr "Информация профиля"
 
 #: templates/accounts/profile.html:16 templates/layouts/sidebar.html:47
+#: templates/support/ticket_list.html:14
 msgid "Dashboard"
 msgstr "Панель инструментов"
 
@@ -355,6 +378,90 @@ msgstr "Меню"
 #: templates/layouts/sidebar.html:64
 msgid "Prices"
 msgstr "Цены"
+
+#: templates/layouts/sidebar.html:82
+msgid "Raise Support"
+msgstr "Вызов поддержки"
+
+#: templates/layouts/sidebar.html:86
+msgid "Ticket"
+msgstr "Заявка"
+
+#: templates/support/ticket_list.html:8 templates/support/ticket_list.html:15
+msgid "Email Application"
+msgstr "Приложение электронной почты"
+
+#: templates/support/ticket_list.html:9
+msgid "A full inbox-ui for you to implement messaging."
+msgstr "Полный почтовый ящик для вас, чтобы реализовать обмен сообщениями со службой поддержки"
+
+#: templates/support/ticket_list.html:35
+msgid "Compose"
+msgstr "Отправить|Создать"
+
+#: templates/support/ticket_list.html:49
+msgid "Inbox"
+msgstr "Входящие"
+
+#: templates/support/ticket_list.html:61
+msgid "Sent"
+msgstr "Отправленные"
+
+#: templates/support/ticket_list.html:70
+msgid "Draft"
+msgstr "Черновики"
+
+#: templates/support/ticket_list.html:79
+msgid "Starred"
+msgstr "Начатые"
+
+#: templates/support/ticket_list.html:89
+msgid "Spam"
+msgstr "Спам"
+
+#: templates/support/ticket_list.html:100
+msgid "Trash"
+msgstr "Мусор"
+
+#: templates/support/ticket_list.html:106
+msgid "Labels"
+msgstr "Лейблы"
+
+#: templates/support/ticket_list.html:113
+msgid "Work"
+msgstr "Работа"
+
+#: templates/support/ticket_list.html:117
+msgid "Misc"
+msgstr "Разное"
+
+#: templates/support/ticket_list.html:121
+msgid "Family"
+msgstr "Семья"
+
+#: templates/support/ticket_list.html:125
+msgid "Design"
+msgstr "Дизайн"
+
+#: templates/support/ticket_list.html:143
+msgid "New Message"
+msgstr "Новые сообщения"
+
+#: templates/support/ticket_list.html:153
+msgid "from"
+msgstr "Отправитель"
+
+#: templates/support/ticket_list.html:160
+msgid "To"
+msgstr "Получатель"
+
+#: templates/support/ticket_list.html:168
+msgid "CC"
+msgstr "СС"
+
+#: templates/support/ticket_list.html:172
+msgid "BCC"
+msgstr "BCC"
 
 #~ msgid "Referral ID"
 #~ msgstr "ID Реферала"
