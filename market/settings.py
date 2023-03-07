@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     "debug_toolbar",
     "mptt",
+    "invitations",
     # "autocomplete_light",
     # Local apps
     "accounts",
@@ -134,6 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
+    # "invitations.backends.InvitationsBackend",
 ]
 
 # Site ID for Django-Allauth

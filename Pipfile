@@ -17,6 +17,7 @@ celery = "*"
 psycopg2-binary = "*"
 django-mptt = "*"
 django-autocomplete-light = "*"
+django-invitations = "*"
 
 [dev-packages]
 black = "*"

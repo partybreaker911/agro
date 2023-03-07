@@ -1,9 +1,10 @@
 from django import forms
 from django.conf import settings
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
+from django.contrib.auth import get_user_model
 from allauth.account.forms import SignupForm
 
-from accounts.models import CustomUser, Profile, ReferralCode
+from accounts.models import CustomUser, Profile
 
 
 class CustomUserCreationForm(UserChangeForm):

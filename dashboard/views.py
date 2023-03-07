@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from accounts.models import Wallet
+from invitations.models import Invitation
 from deals.models import Deal
 
 
@@ -12,12 +13,6 @@ class DashboardView(LoginRequiredMixin, TemplateView):
     def get(self, request):
         wallet = Wallet.objects.get(user=request.user)
         deals = Deal.objects.filter(user=request.user)
-        context = {"wallet": wallet, "deals": deals}
+        invited = Invitation.objects.filter(inviter=request.user)
+        context = {"wallet": wallet, "deals": deals, "invited": invited}
         return render(request, self.template_name, context)
-
-
-# def dashboard(request):
-#     if request.user.is_authenticated:
-#         return render(request, "dashboard/home.html")
-#     else:
-#         return redirect("account_login")

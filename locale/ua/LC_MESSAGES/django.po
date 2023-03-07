@@ -19,239 +19,235 @@ msgstr ""
 
 #: accounts/models.py:19
 msgid "User ID"
-msgstr "ID Пользователя"
+msgstr ""
 
 #: accounts/models.py:28
 msgid "Location ID"
-msgstr "ID Населенного пункта"
+msgstr ""
 
 #: accounts/models.py:34 accounts/models.py:37 accounts/models.py:67
 #: products/models.py:78
 msgid "Location"
-msgstr "Населенный пункт"
+msgstr ""
 
 #: accounts/models.py:38
 msgid "Locations"
-msgstr "Населенные пункты"
+msgstr ""
 
 #: accounts/models.py:46
 msgid "Profile ID"
-msgstr "ID Профиля"
+msgstr ""
 
 #: accounts/models.py:53 accounts/models.py:138 deals/models.py:21
 msgid "User"
-msgstr "Пользователь"
+msgstr ""
 
 #: accounts/models.py:55
 msgid "First Name"
-msgstr "Имя"
+msgstr ""
 
 #: accounts/models.py:56
 msgid "Middle Name"
-msgstr "Фамилия"
+msgstr ""
 
 #: accounts/models.py:57
 msgid "Last Name"
-msgstr "Отчество"
+msgstr ""
 
 #: accounts/models.py:59
 msgid "Birth Date"
-msgstr "Дата рождения"
+msgstr ""
 
 #: accounts/models.py:63
 msgid "Phone"
-msgstr "Телефон"
+msgstr ""
 
 #: accounts/models.py:64
 msgid "Address"
-msgstr "Адрес"
+msgstr ""
 
 #: accounts/models.py:74 templates/accounts/profile.html:10
 #: templates/accounts/profile.html:17
 msgid "Profile"
-msgstr "Профиль"
+msgstr ""
 
 #: accounts/models.py:75
 msgid "Profiles"
-msgstr "Профили"
+msgstr ""
 
 #: accounts/models.py:131
 msgid "Wallet ID"
-msgstr "ID Кошелька"
+msgstr ""
 
 #: accounts/models.py:141
 msgid "Balence"
-msgstr "Баланс"
+msgstr ""
 
 #: accounts/models.py:143
 msgid "Updated"
-msgstr "Обновлено"
+msgstr ""
 
 #: accounts/models.py:146
 msgid "Wallet"
-msgstr "Кошелек"
+msgstr ""
 
 #: accounts/models.py:147
 msgid "Wallets"
-msgstr "Кошельки"
+msgstr ""
 
 #: deals/models.py:15
 msgid "Buy"
-msgstr "Покупка"
+msgstr ""
 
 #: deals/models.py:16
 msgid "Sell"
-msgstr "Продажа"
+msgstr ""
 
 #: deals/models.py:19
 msgid "Deal ID"
-msgstr "ID Сделки"
+msgstr ""
 
 #: deals/models.py:27 products/models.py:46 products/models.py:52
 #: products/models.py:75 templates/dashboard/home.html:170
 msgid "Product"
-msgstr "Продукт"
+msgstr ""
 
 #: deals/models.py:29 templates/dashboard/home.html:172
 msgid "Quantity"
-msgstr "Количество"
+msgstr ""
 
 #: deals/models.py:30 templates/dashboard/home.html:171
 msgid "Type"
-msgstr "Тип"
+msgstr ""
 
 #: deals/models.py:31 templates/dashboard/home.html:173
 msgid "Approved"
-msgstr "Подтвержден"
+msgstr ""
 
 #: deals/models.py:32 templates/dashboard/home.html:174
 msgid "Timestamp"
-msgstr "Дата и время"
+msgstr ""
 
 #: deals/models.py:35
 msgid "Deal"
-msgstr "Сделка"
+msgstr ""
 
 #: deals/models.py:36
 msgid "Deals"
-msgstr "Сделки"
+msgstr ""
 
 #: market/settings.py:161
 msgid "Russian"
-msgstr "Русский"
+msgstr ""
 
 #: market/settings.py:162
 msgid "Ukrainian"
-msgstr "Украинский"
+msgstr ""
 
 #: market/settings.py:163
 msgid "English"
-msgstr "Английский"
+msgstr ""
 
 #: products/models.py:11
 msgid "Category ID"
-msgstr "ID Категории"
+msgstr ""
 
 #: products/models.py:17
 msgid "Name"
-msgstr "Название"
+msgstr ""
 
 #: products/models.py:20
 msgid "Parent"
-msgstr "Исходный"
+msgstr ""
 
 #: products/models.py:28 products/models.py:44
 #: templates/layouts/sidebar.html:58
 msgid "Category"
-msgstr "Категория"
+msgstr ""
 
 #: products/models.py:29
 msgid "Categoryes"
-msgstr "Категории"
+msgstr ""
 
 #: products/models.py:37
 msgid "Product ID"
-msgstr "ID Продукта"
+msgstr ""
 
 #: products/models.py:48
 msgid "Sold Count"
-msgstr "Кол-во проданных"
+msgstr ""
 
 #: products/models.py:53
 msgid "Products"
-msgstr "Продукты"
+msgstr ""
 
 #: products/models.py:68
 msgid "Product Price ID"
-msgstr "ID цены на продукты"
+msgstr ""
 
 #: products/models.py:80
 msgid "Price"
-msgstr "Цена"
+msgstr ""
 
 #: products/models.py:84
 msgid "Product Price"
-msgstr "Цена на продукт"
+msgstr ""
 
 #: products/models.py:85
 msgid "Product Prices"
-msgstr "Цены на продукты"
+msgstr ""
 
 #: products/views.py:104
 msgid "This product is not available in your location."
-msgstr "Этот продукт не доступен в вашем населенном пункте"
+msgstr ""
 
 #: products/views.py:109
 msgid "You don't have enough points to purchase this product."
-msgstr "У вас на счету не хватает денег"
+msgstr ""
 
 #: products/views.py:118
 msgid "Congratulations, you have successfully purchased this product."
-msgstr "Поздравляем, Вы успешно купили продукт"
+msgstr ""
 
 #: templates/account/login.html:13
 msgid "Log in."
-msgstr "Вход"
+msgstr ""
 
 #: templates/account/login.html:14
 msgid "Log in with your data that you entered during registration."
-msgstr "Войдите под своими данными, которые вы ввели при регистрации."
+msgstr ""
 
 #: templates/account/login.html:42
 msgid "Dont have an account?"
-msgstr "У вас нет аккаунта?"
+msgstr ""
 
 #: templates/account/login.html:42
-#, fuzzy
-#| msgid "Sign Up"
 msgid "Signup"
-msgstr "Регистрация"
+msgstr ""
 
 #: templates/account/login.html:43
 msgid "Forgot password?"
-msgstr "Забыли пароль?"
+msgstr ""
 
 #: templates/account/signup.html:13 templates/account/signup.html:43
 msgid "Sign Up"
-msgstr "Регистрация"
+msgstr ""
 
 #: templates/account/signup.html:14
 msgid "Input your data to register to our website."
-msgstr "Введите свои данные для регистрации на нашем сайте."
+msgstr ""
 
 #: templates/account/signup.html:46
 msgid "Already have an account?"
-msgstr "Уже есть аккаунт?"
+msgstr ""
 
 #: templates/account/signup.html:46
-#, fuzzy
-#| msgid "Log in."
 msgid "Log in"
-msgstr "Вход"
+msgstr ""
 
 #: templates/account/verification_sent.html:10
 msgid "Verify Your E-mail Address"
-msgstr "Подтвердите свой имейл адрес"
+msgstr ""
 
 #: templates/account/verification_sent.html:11
 msgid ""
@@ -260,111 +256,83 @@ msgid ""
 "your main inbox, check your spam folder. Please contact us if you do not "
 "receive the verification e-mail within a few minutes."
 msgstr ""
-"Мы отправили вам электронное письмо для проверки. Перейдите по ссылке, "
-"указанной на завершить процесс регистрации. Если вы не видите письмо с "
-"подтверждением в Ваш основной почтовый ящик, проверьте папку со спамом. "
-"Пожалуйста, свяжитесь с нами, если вы этого не сделаетеполучить "
-"подтверждение по электронной почте в течение нескольких минут."
 
 #: templates/accounts/profile.html:11 templates/accounts/profile.html:46
 msgid "Profile info"
-msgstr "Информация профиля"
+msgstr ""
 
 #: templates/accounts/profile.html:16 templates/layouts/sidebar.html:47
 msgid "Dashboard"
-msgstr "Панель инструментов"
+msgstr ""
 
 #: templates/accounts/profile.html:29
 msgid "Avatar"
-msgstr "Аватар"
+msgstr ""
 
 #: templates/accounts/profile.html:38
 msgid "Upload"
-msgstr "Загрузть"
+msgstr ""
 
 #: templates/accounts/profile.html:53 templates/deal/deal_create.html:9
 msgid "Save"
-msgstr "Сохранить"
+msgstr ""
 
 #: templates/accounts/referral_form.html:5
 msgid "Invite Referral Users"
-msgstr "Пригласить пользователей"
+msgstr ""
 
 #: templates/accounts/referral_form.html:9
 msgid "Send Invite"
-msgstr "Отправить приглашение"
+msgstr ""
 
 #: templates/accounts/referral_form.html:11
 msgid "Referral invite sent!"
-msgstr "Приглашение отправленно!"
+msgstr ""
 
 #: templates/accounts/referral_form.html:13
 msgid "Close"
-msgstr "Закрыть"
+msgstr ""
 
 #: templates/dashboard/home.html:7
 msgid "Profile Statistics"
-msgstr "Статистика профиля"
+msgstr ""
 
 #: templates/dashboard/home.html:23
 msgid "Wallet balance"
-msgstr "Баланс кошелька"
+msgstr ""
 
 #: templates/dashboard/home.html:86 templates/dashboard/home.html:98
 msgid "Profile Sells"
-msgstr "Продажи профиля"
+msgstr ""
 
 #: templates/dashboard/home.html:161
 msgid "Latest Deals"
-msgstr "Последнии сделки"
+msgstr ""
 
 #: templates/dashboard/home.html:162
 msgid "Create New Deal"
-msgstr "Создать новую сделку"
+msgstr ""
 
 #: templates/dashboard/home.html:233
 msgid "Recent Invited"
-msgstr "Недавно приглашенные"
+msgstr ""
 
 #: templates/dashboard/home.html:251
 msgid "No invited users yet"
-msgstr "Приглашенных пользователей пока нет"
+msgstr "Ще немає запрошених користувачів"
 
 #: templates/dashboard/home.html:276
 msgid "Invite new user"
-msgstr "Пригласить нового пользователя"
+msgstr ""
 
 #: templates/dashboard/home.html:282
-#, fuzzy
-#| msgid "Profile"
 msgid "Visitors Profile"
-msgstr "Профиль"
+msgstr ""
 
 #: templates/layouts/sidebar.html:43
 msgid "Menu"
-msgstr "Меню"
+msgstr ""
 
 #: templates/layouts/sidebar.html:64
 msgid "Prices"
-msgstr "Цены"
-
-#~ msgid "Referral ID"
-#~ msgstr "ID Реферала"
-
-#~ msgid "User refferal"
-#~ msgstr "Реферал пользователя"
-
-#~ msgid "Referral Code"
-#~ msgstr "Реферальный код"
-
-#~ msgid "Invited Email"
-#~ msgstr "Имейл"
-
-#~ msgid "Referred"
-#~ msgstr "Приглашенный пользователь"
-
-#~ msgid "Created"
-#~ msgstr "Создан"
-
-#~ msgid "Referral Codes"
-#~ msgstr "Реферальные коды"
+msgstr ""
