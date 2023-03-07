@@ -1,0 +1,14 @@
+{% extends 'layouts/master.html' %}
+
+
+{% block content %}
+    
+    {% for deal in deals %}
+        {{ deal.product }}
+        {{ deal.type }}
+        {{ deal.quantity }}
+        {{ deal.timestamp }}
+    {% endfor %}
+        
+{% endblock content %}
+    
