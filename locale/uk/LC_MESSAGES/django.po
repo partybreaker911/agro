@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:57+0200\n"
+"POT-Creation-Date: 2023-03-08 01:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgid "Profile ID"
 msgstr "ID Профiля"
 
 #: accounts/models.py:53 accounts/models.py:138 deals/models.py:21
-#: support/models.py:14
+#: support/models.py:14 support/models.py:34
 msgid "User"
 msgstr "Користувач"
 
@@ -110,7 +110,7 @@ msgstr "ID Угоди"
 
 #: deals/models.py:27 products/models.py:46 products/models.py:52
 #: products/models.py:75 templates/dashboard/home.html:170
-#: templates/support/ticket_list.html:109
+#: templates/support/ticket_list.html:111
 msgid "Product"
 msgstr "Продукт"
 
@@ -126,7 +126,8 @@ msgstr "Тип"
 msgid "Approved"
 msgstr "Затверджено"
 
-#: deals/models.py:32 support/models.py:18 templates/dashboard/home.html:174
+#: deals/models.py:32 support/models.py:18 support/models.py:41
+#: templates/dashboard/home.html:174
 msgid "Timestamp"
 msgstr "Мiтка часу"
 
@@ -215,20 +216,38 @@ msgstr "Вітаємо, ви успішно придбали цей продук
 msgid "Message ID"
 msgstr ""
 
-#: support/models.py:15 templates/support/ticket_list.html:164
+#: support/models.py:15 templates/support/ticket_list.html:166
 msgid "Subject"
 msgstr ""
 
-#: support/models.py:16 support/models.py:22
+#: support/models.py:16 support/models.py:39
 msgid "Message"
 msgstr ""
 
-#: support/models.py:17
+#: support/models.py:17 support/models.py:40
 msgid "Image"
 msgstr ""
 
+#: support/models.py:22 support/models.py:37 templates/layouts/sidebar.html:86
+msgid "Ticket"
+msgstr "Тiкет"
+
 #: support/models.py:23
-msgid "Messages"
+#, fuzzy
+#| msgid "Ticket"
+msgid "Tickets"
+msgstr "Тiкет"
+
+#: support/models.py:31
+msgid "Reply ID"
+msgstr ""
+
+#: support/models.py:44 templates/support/ticket_detail.html:27
+msgid "Reply"
+msgstr ""
+
+#: support/models.py:45
+msgid "Replyes"
 msgstr ""
 
 #: templates/account/login.html:13
@@ -293,7 +312,8 @@ msgid "Profile info"
 msgstr "Інформація про профіль"
 
 #: templates/accounts/profile.html:16 templates/layouts/sidebar.html:47
-#: templates/support/ticket_list.html:14
+#: templates/support/ticket_detail.html:15
+#: templates/support/ticket_form.html:16 templates/support/ticket_list.html:14
 msgid "Dashboard"
 msgstr "Панель"
 
@@ -383,9 +403,41 @@ msgstr "Ціни"
 msgid "Raise Support"
 msgstr "Виклик підтримки"
 
-#: templates/layouts/sidebar.html:86
-msgid "Ticket"
+#: templates/support/ticket_detail.html:9
+#: templates/support/ticket_detail.html:16
+#, fuzzy
+#| msgid "Ticket"
+msgid "Ticket detail"
 msgstr "Тiкет"
+
+#: templates/support/ticket_detail.html:10
+msgid "Ticket detail, where you can reply to admin"
+msgstr "Деталі тикета, де можна відповісти адміну"
+
+#: templates/support/ticket_detail.html:31
+#: templates/support/ticket_form.html:34
+msgid "Post"
+msgstr "Опублікувати"
+
+#: templates/support/ticket_form.html:10
+#, fuzzy
+#| msgid "Created"
+msgid "Create ticket"
+msgstr "Створений"
+
+#: templates/support/ticket_form.html:11
+msgid "Allow you to write message to support team"
+msgstr "Дозволяє писати повідомлення в службу підтримки"
+
+#: templates/support/ticket_form.html:17
+#, fuzzy
+#| msgid "Raise Support"
+msgid "Support"
+msgstr "Пiдтримка"
+
+#: templates/support/ticket_form.html:28
+msgid "Default Editor"
+msgstr "Редактор за замовчуванням"
 
 #: templates/support/ticket_list.html:8 templates/support/ticket_list.html:15
 msgid "Email Application"
@@ -395,73 +447,81 @@ msgstr "Програма електронної пошти"
 msgid "A full inbox-ui for you to implement messaging."
 msgstr "Повноцінний інтерфейс для обміну повідомленнями з службою пiдтримки"
 
-#: templates/support/ticket_list.html:35
+#: templates/support/ticket_list.html:36
 msgid "Compose"
-msgstr "Надіслати|Створити"
+msgstr "Надіслати"
 
-#: templates/support/ticket_list.html:49
+#: templates/support/ticket_list.html:51
 msgid "Inbox"
 msgstr "Вхiднi"
 
-#: templates/support/ticket_list.html:61
+#: templates/support/ticket_list.html:63
 msgid "Sent"
 msgstr "Вiдправленi"
 
-#: templates/support/ticket_list.html:70
+#: templates/support/ticket_list.html:72
 msgid "Draft"
 msgstr "Чернетка"
 
-#: templates/support/ticket_list.html:79
+#: templates/support/ticket_list.html:81
 msgid "Starred"
 msgstr "Розпочатi"
 
-#: templates/support/ticket_list.html:89
+#: templates/support/ticket_list.html:91
 msgid "Spam"
 msgstr "Спам"
 
-#: templates/support/ticket_list.html:100
+#: templates/support/ticket_list.html:102
 msgid "Trash"
 msgstr "Смiття"
 
-#: templates/support/ticket_list.html:106
+#: templates/support/ticket_list.html:108
 msgid "Labels"
 msgstr "Лейбли"
 
-#: templates/support/ticket_list.html:113
+#: templates/support/ticket_list.html:115
 msgid "Work"
 msgstr "Робота"
 
-#: templates/support/ticket_list.html:117
+#: templates/support/ticket_list.html:119
 msgid "Misc"
 msgstr "Рiзне"
 
-#: templates/support/ticket_list.html:121
+#: templates/support/ticket_list.html:123
 msgid "Family"
 msgstr "Сiм'я"
 
-#: templates/support/ticket_list.html:125
+#: templates/support/ticket_list.html:127
 msgid "Design"
 msgstr "Дизайн"
 
-#: templates/support/ticket_list.html:143
+#: templates/support/ticket_list.html:145
 msgid "New Message"
 msgstr "Новi повiдомлення"
 
-#: templates/support/ticket_list.html:153
+#: templates/support/ticket_list.html:155
 msgid "from"
 msgstr "Вiдправник"
 
-#: templates/support/ticket_list.html:160
+#: templates/support/ticket_list.html:162
 msgid "To"
 msgstr "Одержувач"
 
-#: templates/support/ticket_list.html:168
+#: templates/support/ticket_list.html:170
 msgid "CC"
 msgstr "СС"
 
-#: templates/support/ticket_list.html:172
+#: templates/support/ticket_list.html:174
 msgid "BCC"
 msgstr "BCC"
+
+#: templates/support/ticket_list.html:394
+msgid "Search ticket.."
+msgstr "Пошук звернення.."
+
+#: templates/support/ticket_list.html:476
+msgid "No Items Found"
+msgstr "Елементів не знайдено"
 
 #~ msgid "Referral ID"
 #~ msgstr "ID Реферала"
@@ -477,9 +537,6 @@ msgstr "BCC"
 
 #~ msgid "Referred"
 #~ msgstr "Реферальний користувач"
-
-#~ msgid "Created"
-#~ msgstr "Створений"
 
 #~ msgid "Referral Codes"
 #~ msgstr "Промо код"

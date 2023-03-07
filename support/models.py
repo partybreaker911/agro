@@ -19,8 +19,30 @@ class Ticket(models.Model):
 
     class Meta:
         ordering = ["-timestamp"]
-        verbose_name = _("Message")
-        verbose_name = _("Messages")
+        verbose_name = _("Ticket")
+        verbose_name = _("Tickets")
 
     def __str__(self) -> str:
         return f"{self.user} {self.subject}"
+
+
+class Reply(models.Model):
+    id = models.UUIDField(
+        _("Reply ID"), primary_key=True, default=uuid4, unique=True, editable=False
+    )
+    user = models.ForeignKey(
+        User, verbose_name=_("User"), on_delete=models.CASCADE, blank=True, null=True
+    )
+    ticket = models.ForeignKey(
+        Ticket, verbose_name=_("Ticket"), on_delete=models.CASCADE
+    )
+    text = models.TextField(_("Message"))
+    image = models.ImageField(_("Image"), upload_to="media/", blank=True, null=True)
+    timestamp = models.DateTimeField(_("Timestamp"), auto_now_add=True)
+
+    class Meta:
+        verbose_name = _("Reply")
+        verbose_name_plural = _("Replyes")
+
+    def __str__(self) -> str:
+        return f"{self.ticket.user} {self.ticket.subject}"
