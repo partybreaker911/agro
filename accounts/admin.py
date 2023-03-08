@@ -18,7 +18,18 @@ class CustomUserAdmin(UserAdmin):
 
 admin.site.register(CustomUser, CustomUserAdmin)
 
-admin.site.register(Profile)
+
+class ProfileAdmin(admin.ModelAdmin):
+    model = admin
+    list_display = [
+        "id",
+        "user",
+        "first_name",
+        "middle_name",
+    ]
+
+
+admin.site.register(Profile, ProfileAdmin)
 
 admin.site.register(Wallet)
 

@@ -204,6 +204,12 @@
                                                 <p class="mb-0"> {{ deal.timestamp }}</p>
                                             </td>
                                         </tr>
+                                        {% empty %}
+                                        <tr>
+                                            <td colspan="5" class="col-auto">
+                                                <p class="mb-0 text-center">{% trans 'This user have not any deals yet!' %}</p>
+                                            </td>
+                                        </tr>
                                         {% endfor %}
                                     </tbody>
                                 </table>

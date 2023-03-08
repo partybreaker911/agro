@@ -41,16 +41,3 @@ class WalletView(LoginRequiredMixin, View):
     def get(self, request):
         wallet = Wallet.objects.get(user=request.user)
         return render(request, "accounts/wallet.html", {"wallet": wallet})
-
-
-# class CustomSignupView(SignupView):
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         if "ref" in self.request.GET:
-#             referral_code = self.request.GET["ref"]
-#             try:
-#                 referral = ReferralCode.objects.get(code=referral_code)
-#                 context["referral"] = referral
-#             except ReferralCode.DoesNotExist:
-#                 pass
-#         return context
