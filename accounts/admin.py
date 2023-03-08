@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 
-from accounts.models import CustomUser, Profile, Wallet, Location
+from accounts.models import CustomUser, Profile, Wallet, UserLocation
 from accounts.forms import CustomUserCreationForm, CustomUserChangeForm
 
 
@@ -31,6 +31,23 @@ class ProfileAdmin(admin.ModelAdmin):
 
 admin.site.register(Profile, ProfileAdmin)
 
-admin.site.register(Wallet)
 
-admin.site.register(Location)
+class WalletAdmin(admin.ModelAdmin):
+    model = Wallet
+    list_display = [
+        "id",
+        "user",
+        "balance",
+        "timestamp",
+    ]
+
+
+admin.site.register(Wallet, WalletAdmin)
+
+
+class UserLocationAdmin(admin.ModelAdmin):
+    model = UserLocation
+    list_display = ["id", "user", "state", "region", "street"]
+
+
+admin.site.register(UserLocation, UserLocationAdmin)

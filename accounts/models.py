@@ -6,6 +6,8 @@ from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth import get_user_model
 
+from catalogs.models import State, Region, Location
+
 import uuid
 import json
 import random
@@ -21,24 +23,6 @@ class CustomUser(AbstractUser):
 
     def __str__(self) -> str:
         return self.email
-
-
-class Location(models.Model):
-    id = models.UUIDField(
-        _("Location ID"),
-        primary_key=True,
-        default=uuid.uuid4,
-        unique=True,
-        editable=False,
-    )
-    name = models.CharField(_("Location"), max_length=50)
-
-    class Meta:
-        verbose_name = _("Location")
-        verbose_name_plural = _("Locations")
-
-    def __str__(self) -> str:
-        return self.name
 
 
 class Profile(models.Model):
@@ -61,14 +45,6 @@ class Profile(models.Model):
         null=True,
     )
     phone = models.CharField(_("Phone"), max_length=50)
-    address = models.TextField(_("Address"))
-    location = models.ForeignKey(
-        Location,
-        verbose_name=_("Location"),
-        on_delete=models.CASCADE,
-        blank=True,
-        null=True,
-    )
 
     class Meta:
         verbose_name = _("Profile")
@@ -110,7 +86,6 @@ class Profile(models.Model):
                 "last_name": self.last_name,
                 "birth_date": self.birth_date.isoformat() if self.birth_date else None,
                 "phone": self.phone,
-                "address": self.address,
             }
         )
 
@@ -122,12 +97,46 @@ class Profile(models.Model):
         profile.middle_name = profile_dict["middle_name"]
         profile.last_name = profile_dict["last_name"]
         profile.phone = profile_dict["phone"]
-        profile.address = profile_dict["address"]
         if profile_dict["birth_date"]:
             profile.birth_date = datetime.datetime.fromisoformat(
                 profile_dict["birth_date"]
             )
         return profile
+
+
+class UserLocation(models.Model):
+    id = models.UUIDField(
+        _("User Location ID"),
+        primary_key=True,
+        default=uuid.uuid4,
+        unique=True,
+        editable=False,
+    )
+    user = models.OneToOneField(
+        CustomUser, verbose_name=_("User"), on_delete=models.CASCADE
+    )
+    state = models.ForeignKey(
+        State, verbose_name=_("State"), on_delete=models.CASCADE, blank=True, null=True
+    )
+    region = models.ForeignKey(
+        Region,
+        verbose_name=_("Region"),
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+    )
+    location = models.ForeignKey(
+        Location,
+        verbose_name=_("Location"),
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+    )
+    street = models.CharField(_("Street"), max_length=50)
+
+    class Meta:
+        verbose_name = _("User Location")
+        verbose_name_plural = _("Users Locations")
 
 
 class Wallet(models.Model):
@@ -144,7 +153,7 @@ class Wallet(models.Model):
     balance = models.DecimalField(
         _("Balence"), max_digits=10, decimal_places=2, default=0
     )
-    updated = models.DateTimeField(_("Updated"), auto_now_add=True)
+    timestamp = models.DateTimeField(_("Updated"), auto_now_add=True)
 
     class Meta:
         verbose_name = _("Wallet")

@@ -63,8 +63,8 @@ INSTALLED_APPS = [
     # "autocomplete_light",
     # Local apps
     "accounts",
+    "catalogs",
     "dashboard",
-    "products",  # TODO: probably i need refactor this as catalog app. With contains all of catalog data (cars, products, etc.)
     "deals",
     "support",
 ]

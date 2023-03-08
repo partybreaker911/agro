@@ -3,7 +3,8 @@ from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 
 import uuid
-from products.models import Product
+
+from catalogs.models import Product
 
 User = get_user_model()
 
