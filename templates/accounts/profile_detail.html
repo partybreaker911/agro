@@ -4,6 +4,23 @@
 
 {% block content %}
 <div class="page-heading">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>{% trans 'Profile' %} {{ profile.get_full_name }}</h3>
+                <p class="text-subtitle text-muted">{% trans 'Profile info' %}</p>
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Dashboard' %}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{% trans 'Profile' %}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+<div class="page-heading">
     <h3>{% trans "Profile Statistics" %}</h3>
 </div>
 <div class="page-content">
@@ -57,7 +74,7 @@
                                   <p class="mb-0">{% trans 'Address' %}</p>
                                 </div>
                                 <div class="col-sm-9">
-                                  <p class="text-muted mb-0">{{ profile.address }}</p>
+                                  <p class="text-muted mb-0">{{ profile.user.userlocation.get_full_address }}</p>
                                 </div>
                             </div>
                         <!-- Information about user profile -->
@@ -219,6 +236,7 @@
             </div>
         </div> -->
     </section>
-</div>   
+</div>  
+</div> 
 {% endblock content %}
     

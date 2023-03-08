@@ -85,8 +85,17 @@
                         <div class="card-header">
                             <h4>{% trans 'Profile Sells' %}</h4>
                         </div>
-                        <div class="card-body">
-                            <div id="chart-profile-visit"></div>
+                        <div class="card-body">                           
+                            {% for deal in deals %}
+                            <td colspan="5" class="col-auto">
+                                <p class="mb-0 text-center">{% trans 'This user have not any deals yet!' %}</p>
+                            </td>
+                                {% empty %}
+                                <td colspan="5" class="col-auto">
+                                    <p class="mb-0 text-center">{% trans 'This user have not any deals yet!' %}</p>
+                                </td>
+                            {% endfor %}
+                                
                         </div>
                     </div>
                 </div>
@@ -259,7 +268,7 @@
                         {% endfor %}
                     <div class="px-4">
                         <!-- TODO: delete this -->
-                        <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3' id="invite-referral-btn"><a href="{% url 'invitations:send-invite' %}">{% trans 'Invite new user' %}</a></button>
+                        <a class='btn btn-block btn-xl btn-outline-primary font-bold mt-3' id="invite-referral-btn" href="{% url 'invitations:send-invite' %}">{% trans 'Invite new user' %}</a>
                     </div>
                 </div>
             </div>

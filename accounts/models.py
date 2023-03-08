@@ -138,6 +138,13 @@ class UserLocation(models.Model):
         verbose_name = _("User Location")
         verbose_name_plural = _("Users Locations")
 
+    def __str__(self) -> str:
+        return f"{self.user}"
+
+    @property
+    def get_full_address(self):
+        return f"{self.state}, {self.region}, {self.location}, {self.street}"
+
 
 class Wallet(models.Model):
     id = models.UUIDField(
