@@ -79,13 +79,16 @@
                     </li>
                 </ul>
             </li>
-            <li class="sidebar-title">{% trans 'Raise Support' %}</li>
-            <li class="sidebar-item">
-                <a href="{% url 'ticket_list' %}" class="sidebar-link">
-                    <i class="bi bi-life-preserver"></i>
-                    <span>{% trans 'Ticket' %}</span>
-                </a>
-            </li>
+            <div class="py-sm-4 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1">
+                <li class="sidebar-title">{% trans 'Raise Support' %}</li>
+                    <li class="sidebar-item">
+                        <a href="{% url 'ticket_list' %}" class="sidebar-link">
+                            <i class="bi bi-life-preserver"></i>
+                            <span>{% trans 'Ticket' %}</span>
+                        </a>
+                    </li>
+                </li>
+            </div>
         </ul>
     </div> 
 </div>

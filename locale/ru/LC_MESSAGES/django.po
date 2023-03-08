@@ -442,7 +442,7 @@ msgstr "На этой странице вы можете создать новы
 #, fuzzy
 #| msgid "Invited Email"
 msgid "Invite Form"
-msgstr "Имейл"
+msgstr "Форма приглашения"
 
 #: templates/invitations/forms/_invite.html:11
 msgid "On this page you can invite new users to your group"
