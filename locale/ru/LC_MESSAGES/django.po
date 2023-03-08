@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-08 14:53+0200\n"
+"POT-Creation-Date: 2023-03-08 16:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgstr "Населенные пункты"
 msgid "Profile ID"
 msgstr "ID Профиля"
 
-#: accounts/models.py:53 accounts/models.py:138 deals/models.py:21
+#: accounts/models.py:53 accounts/models.py:142 deals/models.py:21
 #: support/models.py:14 support/models.py:34
 msgid "User"
 msgstr "Пользователь"
@@ -76,23 +76,23 @@ msgstr "Профиль"
 msgid "Profiles"
 msgstr "Профили"
 
-#: accounts/models.py:131
+#: accounts/models.py:135
 msgid "Wallet ID"
 msgstr "ID Кошелька"
 
-#: accounts/models.py:141
+#: accounts/models.py:145
 msgid "Balence"
 msgstr "Баланс"
 
-#: accounts/models.py:143
+#: accounts/models.py:147
 msgid "Updated"
 msgstr "Обновлено"
 
-#: accounts/models.py:146
+#: accounts/models.py:150
 msgid "Wallet"
 msgstr "Кошелек"
 
-#: accounts/models.py:147
+#: accounts/models.py:151
 msgid "Wallets"
 msgstr "Кошельки"
 
@@ -109,28 +109,28 @@ msgid "Deal ID"
 msgstr "ID Сделки"
 
 #: deals/models.py:27 products/models.py:46 products/models.py:52
-#: products/models.py:75 templates/accounts/profile_detail.html:142
+#: products/models.py:75 templates/accounts/profile_detail.html:145
 #: templates/dashboard/home.html:170 templates/support/ticket_list.html:111
 msgid "Product"
 msgstr "Продукт"
 
-#: deals/models.py:29 templates/accounts/profile_detail.html:144
+#: deals/models.py:29 templates/accounts/profile_detail.html:147
 #: templates/dashboard/home.html:172
 msgid "Quantity"
 msgstr "Количество"
 
-#: deals/models.py:30 templates/accounts/profile_detail.html:143
+#: deals/models.py:30 templates/accounts/profile_detail.html:146
 #: templates/dashboard/home.html:171
 msgid "Type"
 msgstr "Тип"
 
-#: deals/models.py:31 templates/accounts/profile_detail.html:145
+#: deals/models.py:31 templates/accounts/profile_detail.html:148
 #: templates/dashboard/home.html:173
 msgid "Approved"
 msgstr "Подтвержден"
 
 #: deals/models.py:32 support/models.py:18 support/models.py:41
-#: templates/accounts/profile_detail.html:146 templates/dashboard/home.html:174
+#: templates/accounts/profile_detail.html:149 templates/dashboard/home.html:174
 msgid "Timestamp"
 msgstr "Дата и время"
 
@@ -171,7 +171,8 @@ msgstr "Исходный"
 msgid "Category"
 msgstr "Категория"
 
-#: products/models.py:29
+#: products/models.py:29 templates/products/category_list.html:8
+#: templates/products/category_list.html:15
 msgid "Categoryes"
 msgstr "Категории"
 
@@ -231,7 +232,7 @@ msgstr "Сообщение"
 msgid "Image"
 msgstr "Картинка"
 
-#: support/models.py:22 support/models.py:37 templates/layouts/sidebar.html:86
+#: support/models.py:22 support/models.py:37 templates/layouts/sidebar.html:87
 msgid "Ticket"
 msgstr "Заявка"
 
@@ -316,7 +317,8 @@ msgstr "Информация профиля"
 
 #: templates/accounts/profile.html:16 templates/deal/deal_create.html:16
 #: templates/invitations/forms/_invite.html:16
-#: templates/layouts/sidebar.html:47 templates/support/ticket_detail.html:15
+#: templates/layouts/sidebar.html:47 templates/products/category_list.html:14
+#: templates/support/ticket_detail.html:15
 #: templates/support/ticket_form.html:16 templates/support/ticket_list.html:14
 msgid "Dashboard"
 msgstr "Панель инструментов"
@@ -327,7 +329,7 @@ msgstr "Аватар"
 
 #: templates/accounts/profile.html:38
 msgid "Upload"
-msgstr "Загрузть"
+msgstr "Загрузить"
 
 #: templates/accounts/profile.html:53 templates/deal/deal_create.html:37
 msgid "Save"
@@ -339,13 +341,10 @@ msgstr "Статистика профиля"
 
 #: templates/accounts/profile_detail.html:16
 #, fuzzy
-#| msgid "Profile info"
 msgid "Profile Information"
 msgstr "Информация профиля"
 
-#: templates/accounts/profile_detail.html:21
-#, fuzzy
-#| msgid "First Name"
+
 msgid "Full Name"
 msgstr "ФИО"
 
@@ -353,25 +352,43 @@ msgstr "ФИО"
 msgid "Email"
 msgstr "Имейл"
 
-#: templates/accounts/profile_detail.html:48
-#, fuzzy
-#| msgid "Birth Date"
+
 msgid "Birth date"
 msgstr "Дата рождения"
 
-#: templates/accounts/profile_detail.html:135 templates/dashboard/home.html:161
+
+msgid "Total actions"
+msgstr "Населенные пункты"
+
+
+msgid "Deals are made"
+msgstr "Сделок совершено"
+
+#: templates/accounts/profile_detail.html:102
+#, fuzzy
+msgid "Invite new user"
+msgstr "Пригласить нового пользователя"
+
+msgid "Invited users"
+msgstr "Приглашено пользователей"
+
+#: templates/accounts/profile_detail.html:121 templates/dashboard/home.html:23
+msgid "Wallet balance"
+msgstr "Баланс кошелька"
+
+#: templates/accounts/profile_detail.html:138 templates/dashboard/home.html:161
 msgid "Latest Deals"
 msgstr "Последнии сделки"
 
-#: templates/accounts/profile_detail.html:176 templates/dashboard/home.html:211
+#: templates/accounts/profile_detail.html:179 templates/dashboard/home.html:211
 msgid "This user have not any deals yet!"
 msgstr "У этого пользователя еще нет сделок"
 
-#: templates/accounts/profile_detail.html:204 templates/dashboard/home.html:239
+#: templates/accounts/profile_detail.html:207 templates/dashboard/home.html:239
 msgid "Recent Invited"
 msgstr "Недавно приглашенные"
 
-#: templates/accounts/profile_detail.html:208
+#: templates/accounts/profile_detail.html:211
 msgid "See all list"
 msgstr "Посмотреть полный список"
 
@@ -390,10 +407,6 @@ msgstr "Приглашение отправленно!"
 #: templates/accounts/referral_form.html:13
 msgid "Close"
 msgstr "Закрыть"
-
-#: templates/dashboard/home.html:23
-msgid "Wallet balance"
-msgstr "Баланс кошелька"
 
 #: templates/dashboard/home.html:40
 msgid "Followers"
@@ -414,10 +427,6 @@ msgstr "Создать новую сделку"
 #: templates/dashboard/home.html:257
 msgid "No invited users yet"
 msgstr "Приглашенных пользователей пока нет"
-
-#: templates/dashboard/home.html:263
-msgid "Invite new user"
-msgstr "Пригласить нового пользователя"
 
 #: templates/dashboard/home.html:269
 #, fuzzy
@@ -446,7 +455,8 @@ msgstr "Форма приглашения"
 
 #: templates/invitations/forms/_invite.html:11
 msgid "On this page you can invite new users to your group"
-msgstr "На этой странице вы можете приглашать новых пользователей в свою группу"
+msgstr ""
+"На этой странице вы можете приглашать новых пользователей в свою группу"
 
 #: templates/invitations/forms/_invite.html:35
 msgid "Send"
@@ -460,9 +470,13 @@ msgstr "Меню"
 msgid "Prices"
 msgstr "Цены"
 
-#: templates/layouts/sidebar.html:82
+#: templates/layouts/sidebar.html:83
 msgid "Raise Support"
 msgstr "Вызов поддержки"
+
+#: templates/products/category_list.html:9
+msgid "List of categoryes product"
+msgstr "Список категорий продукции"
 
 #: templates/support/ticket_detail.html:9
 #: templates/support/ticket_detail.html:16

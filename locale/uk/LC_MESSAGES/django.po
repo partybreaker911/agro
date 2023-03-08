@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-08 14:53+0200\n"
+"POT-Creation-Date: 2023-03-08 16:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgstr "Населенi пункти"
 msgid "Profile ID"
 msgstr "ID Профiля"
 
-#: accounts/models.py:53 accounts/models.py:138 deals/models.py:21
+#: accounts/models.py:53 accounts/models.py:142 deals/models.py:21
 #: support/models.py:14 support/models.py:34
 msgid "User"
 msgstr "Користувач"
@@ -76,23 +76,23 @@ msgstr "Профiль користувача"
 msgid "Profiles"
 msgstr "Профiлi користувачiв"
 
-#: accounts/models.py:131
+#: accounts/models.py:135
 msgid "Wallet ID"
 msgstr "ID Гаманеця"
 
-#: accounts/models.py:141
+#: accounts/models.py:145
 msgid "Balence"
 msgstr "Баланс"
 
-#: accounts/models.py:143
+#: accounts/models.py:147
 msgid "Updated"
 msgstr "Оновлено"
 
-#: accounts/models.py:146
+#: accounts/models.py:150
 msgid "Wallet"
 msgstr "Гаманець"
 
-#: accounts/models.py:147
+#: accounts/models.py:151
 msgid "Wallets"
 msgstr "Гаманцi"
 
@@ -109,28 +109,28 @@ msgid "Deal ID"
 msgstr "ID Угоди"
 
 #: deals/models.py:27 products/models.py:46 products/models.py:52
-#: products/models.py:75 templates/accounts/profile_detail.html:142
+#: products/models.py:75 templates/accounts/profile_detail.html:145
 #: templates/dashboard/home.html:170 templates/support/ticket_list.html:111
 msgid "Product"
 msgstr "Продукт"
 
-#: deals/models.py:29 templates/accounts/profile_detail.html:144
+#: deals/models.py:29 templates/accounts/profile_detail.html:147
 #: templates/dashboard/home.html:172
 msgid "Quantity"
 msgstr "Кiлькiсть"
 
-#: deals/models.py:30 templates/accounts/profile_detail.html:143
+#: deals/models.py:30 templates/accounts/profile_detail.html:146
 #: templates/dashboard/home.html:171
 msgid "Type"
 msgstr "Тип"
 
-#: deals/models.py:31 templates/accounts/profile_detail.html:145
+#: deals/models.py:31 templates/accounts/profile_detail.html:148
 #: templates/dashboard/home.html:173
 msgid "Approved"
 msgstr "Затверджено"
 
 #: deals/models.py:32 support/models.py:18 support/models.py:41
-#: templates/accounts/profile_detail.html:146 templates/dashboard/home.html:174
+#: templates/accounts/profile_detail.html:149 templates/dashboard/home.html:174
 msgid "Timestamp"
 msgstr "Мiтка часу"
 
@@ -171,7 +171,8 @@ msgstr "Родитель"
 msgid "Category"
 msgstr "Категорiя"
 
-#: products/models.py:29
+#: products/models.py:29 templates/products/category_list.html:8
+#: templates/products/category_list.html:15
 msgid "Categoryes"
 msgstr "Категорii"
 
@@ -231,7 +232,7 @@ msgstr "Повiдомлення"
 msgid "Image"
 msgstr "Зображення"
 
-#: support/models.py:22 support/models.py:37 templates/layouts/sidebar.html:86
+#: support/models.py:22 support/models.py:37 templates/layouts/sidebar.html:87
 msgid "Ticket"
 msgstr "Тiкет"
 
@@ -316,7 +317,8 @@ msgstr "Інформація про профіль"
 
 #: templates/accounts/profile.html:16 templates/deal/deal_create.html:16
 #: templates/invitations/forms/_invite.html:16
-#: templates/layouts/sidebar.html:47 templates/support/ticket_detail.html:15
+#: templates/layouts/sidebar.html:47 templates/products/category_list.html:14
+#: templates/support/ticket_detail.html:15
 #: templates/support/ticket_form.html:16 templates/support/ticket_list.html:14
 msgid "Dashboard"
 msgstr "Панель"
@@ -359,19 +361,41 @@ msgstr "Електронна пошта"
 msgid "Birth date"
 msgstr "Дата народження"
 
-#: templates/accounts/profile_detail.html:135 templates/dashboard/home.html:161
+#: templates/accounts/profile_detail.html:72
+#, fuzzy
+#| msgid "Locations"
+msgid "Total actions"
+msgstr "Населенi пункти"
+
+#: templates/accounts/profile_detail.html:83
+#, fuzzy
+#| msgid "Deal ID"
+msgid "Deals are made"
+msgstr "ID Угоди"
+
+#: templates/accounts/profile_detail.html:102
+#, fuzzy
+#| msgid "Invite new user"
+msgid "Invited users"
+msgstr "Запросити нового користувача"
+
+#: templates/accounts/profile_detail.html:121 templates/dashboard/home.html:23
+msgid "Wallet balance"
+msgstr "Баланс гаманця"
+
+#: templates/accounts/profile_detail.html:138 templates/dashboard/home.html:161
 msgid "Latest Deals"
 msgstr "Останні пропозиції"
 
-#: templates/accounts/profile_detail.html:176 templates/dashboard/home.html:211
+#: templates/accounts/profile_detail.html:179 templates/dashboard/home.html:211
 msgid "This user have not any deals yet!"
 msgstr "У цього користувача ще немає жодної пропозиції!"
 
-#: templates/accounts/profile_detail.html:204 templates/dashboard/home.html:239
+#: templates/accounts/profile_detail.html:207 templates/dashboard/home.html:239
 msgid "Recent Invited"
 msgstr "Нещодавно запрошені"
 
-#: templates/accounts/profile_detail.html:208
+#: templates/accounts/profile_detail.html:211
 msgid "See all list"
 msgstr "Переглянути весь список"
 
@@ -390,10 +414,6 @@ msgstr "Запрошення для рекомендації надіслано!
 #: templates/accounts/referral_form.html:13
 msgid "Close"
 msgstr "Закрити"
-
-#: templates/dashboard/home.html:23
-msgid "Wallet balance"
-msgstr "Баланс гаманця"
 
 #: templates/dashboard/home.html:40
 msgid "Followers"
@@ -460,9 +480,13 @@ msgstr "Меню"
 msgid "Prices"
 msgstr "Ціни"
 
-#: templates/layouts/sidebar.html:82
+#: templates/layouts/sidebar.html:83
 msgid "Raise Support"
 msgstr "Виклик підтримки"
+
+#: templates/products/category_list.html:9
+msgid "List of categoryes product"
+msgstr ""
 
 #: templates/support/ticket_detail.html:9
 #: templates/support/ticket_detail.html:16
