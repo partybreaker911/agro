@@ -228,7 +228,7 @@
                         </div>
                         <div class="ms-3 name">
                             <h5 class="font-bold"><a href="{% url 'profile' %}">{{ request.user.username }}</a></h5>
-                            <h6 class="text-muted mb-0">{{ request.user.referralcode.code }}</h6>
+                            <h6 class="text-muted mb-0">{{ request.user.email }}</h6>
                         </div>
                     </div>
                 </div>
@@ -241,7 +241,7 @@
                     {% for invite in invited_users %}                        
                   <div class="recent-message d-flex px-4 py-3">
                         <div class="avatar avatar-lg">
-                            <img src="assets/images/faces/4.jpg">
+                            <img src="{% static 'assets/images/faces/4.jpg' %}">
                         </div>
                         <div class="name ms-4">
                             <h5 class="mb-1">{{ invite.get_full_name }}</h5>

@@ -1,6 +1,6 @@
 {% extends 'layouts/master.html' %}
 
-{% load i18n %}
+{% load i18n static %}
 
 {% block content %}
 <div class="page-heading">
@@ -69,7 +69,7 @@
                 <div class="col-12 col-xl-4">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Profile Visit</h4>
+                            <h4>{% trans 'Total actions' %}</h4>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -78,16 +78,16 @@
                                         <svg class="bi text-primary" width="32" height="32" fill="blue"
                                             style="width:10px">
                                             <use
-                                                xlink:href="assets/images/bootstrap-icons.svg#circle-fill" />
+                                                xlink:href="{% static 'assets/images/bootstrap-icons.svg#circle-fill' %}" />
                                         </svg>
-                                        <h5 class="mb-0 ms-3">Europe</h5>
+                                        <h5 class="mb-0 ms-3">{% trans 'Deals are made' %}</h5>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="mb-0">862</h5>
+                                    <h5 class="mb-0">0</h5>
                                 </div>
                                 <div class="col-12">
-                                    <div id="chart-europe"></div>
+                                    {% comment %} <div id="chart-europe"></div> {% endcomment %}
                                 </div>
                             </div>
                             <div class="row">
@@ -96,16 +96,16 @@
                                         <svg class="bi text-success" width="32" height="32" fill="blue"
                                             style="width:10px">
                                             <use
-                                                xlink:href="assets/images/bootstrap-icons.svg#circle-fill" />
+                                                xlink:href="{% static 'assets/images/bootstrap-icons.svg#circle-fill' %}" />
                                         </svg>
-                                        <h5 class="mb-0 ms-3">America</h5>
+                                        <h5 class="mb-0 ms-3">{% trans 'Invited users' %}</h5>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="mb-0">375</h5>
+                                    <h5 class="mb-0">0</h5>
                                 </div>
                                 <div class="col-12">
-                                    <div id="chart-america"></div>
+                                    {% comment %} <div id="chart-america"></div> {% endcomment %}
                                 </div>
                             </div>
                             <div class="row">
@@ -114,16 +114,16 @@
                                         <svg class="bi text-danger" width="32" height="32" fill="blue"
                                             style="width:10px">
                                             <use
-                                                xlink:href="assets/images/bootstrap-icons.svg#circle-fill" />
+                                                xlink:href="{% static 'assets/images/bootstrap-icons.svg#circle-fill' %}" />
                                         </svg>
-                                        <h5 class="mb-0 ms-3">Indonesia</h5>
+                                        <h5 class="mb-0 ms-3">{% trans 'Wallet balance' %}</h5>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="mb-0">1025</h5>
+                                    <h5 class="mb-0">0</h5>
                                 </div>
                                 <div class="col-12">
-                                    <div id="chart-indonesia"></div>
+                                    {% comment %} <div id="chart-indonesia"></div> {% endcomment %}
                                 </div>
                             </div>
                         </div>
@@ -190,11 +190,11 @@
                 <div class="card-body py-4 px-4">
                     <div class="d-flex align-items-center">
                         <div class="avatar avatar-xl">
-                            <img src="assets/images/faces/1.jpg" alt="Face 1">
+                            <img src="{% static 'assets/images/faces/1.jpg' %}" alt="Face 1">
                         </div>
                         <div class="ms-3 name">
-                            <h5 class="font-bold">John Duck</h5>
-                            <h6 class="text-muted mb-0">@johnducky</h6>
+                            <h5 class="font-bold">{{ profile.get_full_name }}</h5>
+                            <h6 class="text-muted mb-0">{{ profile.user.email }}</h6>
                         </div>
                     </div>
                 </div>
