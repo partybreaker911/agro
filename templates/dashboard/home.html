@@ -238,14 +238,14 @@
                     <h4>{% trans 'Recent Invited'%}</h4>
                 </div>
                 <div class="card-content pb-4"> 
-                    {% for invite in invited %}                        
+                    {% for invite in invited_users %}                        
                   <div class="recent-message d-flex px-4 py-3">
                         <div class="avatar avatar-lg">
                             <img src="assets/images/faces/4.jpg">
                         </div>
                         <div class="name ms-4">
-                            <h5 class="mb-1">{{ invite.email }}</h5>
-                            <h6 class="text-muted mb-0">@johnducky</h6>
+                            <h5 class="mb-1">{{ invite.get_full_name }}</h5>
+                            <h6 class="text-muted mb-0"><a href="{% url 'profile_detail' invite.id %}">{{ invite.user.email }}</a></h6>
                         </div>   
                     </div>
                     {% empty %}

@@ -77,6 +77,10 @@ class Profile(models.Model):
     def __str__(self) -> str:
         return f"{self.user.username}"
 
+    @property
+    def get_full_name(self):
+        return self.middle_name + " " + self.first_name + " " + self.last_name
+
     def save(self, *args, **kwargs) -> None:
         super().save(*args, **kwargs)
         cache.set(f"profile_{self.user_id}", self)

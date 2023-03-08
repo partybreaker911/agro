@@ -21,7 +21,7 @@
                                   <p class="mb-0">{% trans 'Full Name' %}</p>
                                 </div>
                                 <div class="col-sm-9">
-                                  <p class="text-muted mb-0">{{ profile.first_name }} {{ profile.middle_name }} {{ profile.last_name }}</p> <!-- Need to added get_full_name to model-->
+                                  <p class="text-muted mb-0">{{ profile.get_full_name }}</p>
                                 </div>
                               </div>
                               <hr>
@@ -147,7 +147,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {% for deals in profile.user.deal %}                                                                                       
+                                        {% for deals in profile.deal %}                                                                                       
                                         <tr>
                                             <td class="col-3">
                                                 <div class="d-flex align-items-center">
