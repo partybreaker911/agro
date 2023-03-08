@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-08 16:16+0200\n"
+"POT-Creation-Date: 2023-03-08 17:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,128 +17,216 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: accounts/models.py:19
+#: accounts/models.py:21
 msgid "User ID"
 msgstr "ID Пользователя"
 
-#: accounts/models.py:28
-msgid "Location ID"
-msgstr "ID Населенного пункта"
-
-#: accounts/models.py:34 accounts/models.py:37 accounts/models.py:67
-#: products/models.py:78
-msgid "Location"
-msgstr "Населенный пункт"
-
-#: accounts/models.py:38
-msgid "Locations"
-msgstr "Населенные пункты"
-
-#: accounts/models.py:46
+#: accounts/models.py:30
 msgid "Profile ID"
 msgstr "ID Профиля"
 
-#: accounts/models.py:53 accounts/models.py:142 deals/models.py:21
-#: support/models.py:14 support/models.py:34
+#: accounts/models.py:37 accounts/models.py:116 accounts/models.py:151
+#: deals/models.py:22 support/models.py:14 support/models.py:34
 msgid "User"
 msgstr "Пользователь"
 
-#: accounts/models.py:55
+#: accounts/models.py:39
 msgid "First Name"
 msgstr "Имя"
 
-#: accounts/models.py:56
+#: accounts/models.py:40
 msgid "Middle Name"
 msgstr "Фамилия"
 
-#: accounts/models.py:57
+#: accounts/models.py:41
 msgid "Last Name"
 msgstr "Отчество"
 
-#: accounts/models.py:59
+#: accounts/models.py:43
 msgid "Birth Date"
 msgstr "Дата рождения"
 
-#: accounts/models.py:63 templates/accounts/profile_detail.html:39
+#: accounts/models.py:47 templates/accounts/profile_detail.html:39
 msgid "Phone"
 msgstr "Телефон"
 
-#: accounts/models.py:64 templates/accounts/profile_detail.html:57
-msgid "Address"
-msgstr "Адрес"
-
-#: accounts/models.py:74 templates/accounts/profile.html:10
+#: accounts/models.py:50 templates/accounts/profile.html:10
 #: templates/accounts/profile.html:17
 msgid "Profile"
 msgstr "Профиль"
 
-#: accounts/models.py:75
+#: accounts/models.py:51
 msgid "Profiles"
 msgstr "Профили"
 
+#: accounts/models.py:109
+#, fuzzy
+#| msgid "Location ID"
+msgid "User Location ID"
+msgstr "ID Населенного пункта"
+
+#: accounts/models.py:119 catalogs/models.py:51 catalogs/models.py:54
+#: catalogs/models.py:67
+msgid "State"
+msgstr "Область"
+
+#: accounts/models.py:123 catalogs/models.py:65 catalogs/models.py:71
+#: catalogs/models.py:85
+msgid "Region"
+msgstr "Район"
+
+#: accounts/models.py:130 catalogs/models.py:82 catalogs/models.py:92
+msgid "Location"
+msgstr "Населенный пункт"
+
 #: accounts/models.py:135
+msgid "Street"
+msgstr "Улица"
+
+#: accounts/models.py:138
+#, fuzzy
+#| msgid "Location"
+msgid "User Location"
+msgstr "Населенный пункт"
+
+#: accounts/models.py:139
+#, fuzzy
+#| msgid "Locations"
+msgid "Users Locations"
+msgstr "Населенные пункты"
+
+#: accounts/models.py:144
 msgid "Wallet ID"
 msgstr "ID Кошелька"
 
-#: accounts/models.py:145
+#: accounts/models.py:154
 msgid "Balence"
 msgstr "Баланс"
 
-#: accounts/models.py:147
+#: accounts/models.py:156
 msgid "Updated"
 msgstr "Обновлено"
 
-#: accounts/models.py:150
+#: accounts/models.py:159
 msgid "Wallet"
 msgstr "Кошелек"
 
-#: accounts/models.py:151
+#: accounts/models.py:160
 msgid "Wallets"
 msgstr "Кошельки"
 
-#: deals/models.py:15
-msgid "Buy"
-msgstr "Покупка"
+#: accounts/views.py:30
+msgid "Your profile has been updated."
+msgstr ""
 
-#: deals/models.py:16
-msgid "Sell"
-msgstr "Продажа"
+#: accounts/views.py:33
+msgid "There was an error updating your profile."
+msgstr ""
 
-#: deals/models.py:19
-msgid "Deal ID"
-msgstr "ID Сделки"
+#: catalogs/models.py:10
+msgid "Category ID"
+msgstr "ID Категории"
 
-#: deals/models.py:27 products/models.py:46 products/models.py:52
-#: products/models.py:75 templates/accounts/profile_detail.html:145
-#: templates/dashboard/home.html:170 templates/support/ticket_list.html:111
+#: catalogs/models.py:12 catalogs/models.py:35
+#: templates/layouts/sidebar.html:58
+msgid "Category"
+msgstr "Категория"
+
+#: catalogs/models.py:15
+#, fuzzy
+#| msgid "Category"
+msgid "SubCategory"
+msgstr "Категория"
+
+#: catalogs/models.py:23
+#, fuzzy
+#| msgid "Category"
+msgid "Product Category"
+msgstr "Категория продукта"
+
+#: catalogs/models.py:24
+#, fuzzy
+#| msgid "Categoryes"
+msgid "Products Categorys"
+msgstr "Категории Продуктов"
+
+#: catalogs/models.py:32
+msgid "Product ID"
+msgstr "ID Продукта"
+
+#: catalogs/models.py:37 catalogs/models.py:40 deals/models.py:28
+#: templates/accounts/profile_detail.html:145 templates/dashboard/home.html:170
+#: templates/support/ticket_list.html:111
 msgid "Product"
 msgstr "Продукт"
 
-#: deals/models.py:29 templates/accounts/profile_detail.html:147
+#: catalogs/models.py:41
+msgid "Products"
+msgstr "Продукты"
+
+#: catalogs/models.py:49
+msgid "State ID"
+msgstr "ID Области"
+
+#: catalogs/models.py:55
+msgid "States"
+msgstr "Область"
+
+#: catalogs/models.py:63
+#, fuzzy
+#| msgid "Location ID"
+msgid "Region ID"
+msgstr "ID Района"
+
+#: catalogs/models.py:72
+msgid "Regions"
+msgstr "Районы"
+
+#: catalogs/models.py:80
+msgid "Location ID"
+msgstr "ID Населенного пункта"
+
+#: catalogs/models.py:93
+msgid "Locations"
+msgstr "Населенные пункты"
+
+#: deals/models.py:16
+msgid "Buy"
+msgstr "Покупка"
+
+#: deals/models.py:17
+msgid "Sell"
+msgstr "Продажа"
+
+#: deals/models.py:20
+msgid "Deal ID"
+msgstr "ID Сделки"
+
+#: deals/models.py:30 templates/accounts/profile_detail.html:147
 #: templates/dashboard/home.html:172
 msgid "Quantity"
 msgstr "Количество"
 
-#: deals/models.py:30 templates/accounts/profile_detail.html:146
+#: deals/models.py:31 templates/accounts/profile_detail.html:146
 #: templates/dashboard/home.html:171
 msgid "Type"
 msgstr "Тип"
 
-#: deals/models.py:31 templates/accounts/profile_detail.html:148
+#: deals/models.py:32 templates/accounts/profile_detail.html:148
 #: templates/dashboard/home.html:173
 msgid "Approved"
 msgstr "Подтвержден"
 
-#: deals/models.py:32 support/models.py:18 support/models.py:41
+#: deals/models.py:33 support/models.py:18 support/models.py:41
 #: templates/accounts/profile_detail.html:149 templates/dashboard/home.html:174
 msgid "Timestamp"
 msgstr "Дата и время"
 
-#: deals/models.py:35
+#: deals/models.py:36
 msgid "Deal"
 msgstr "Сделка"
 
-#: deals/models.py:36 templates/dashboard/home.html:74
+#: deals/models.py:37 templates/dashboard/home.html:74
 msgid "Deals"
 msgstr "Сделки"
 
@@ -153,68 +241,6 @@ msgstr "Украинский"
 #: market/settings.py:164
 msgid "English"
 msgstr "Английский"
-
-#: products/models.py:11
-msgid "Category ID"
-msgstr "ID Категории"
-
-#: products/models.py:17
-msgid "Name"
-msgstr "Название"
-
-#: products/models.py:20
-msgid "Parent"
-msgstr "Исходный"
-
-#: products/models.py:28 products/models.py:44
-#: templates/layouts/sidebar.html:58
-msgid "Category"
-msgstr "Категория"
-
-#: products/models.py:29 templates/products/category_list.html:8
-#: templates/products/category_list.html:15
-msgid "Categoryes"
-msgstr "Категории"
-
-#: products/models.py:37
-msgid "Product ID"
-msgstr "ID Продукта"
-
-#: products/models.py:48
-msgid "Sold Count"
-msgstr "Кол-во проданных"
-
-#: products/models.py:53
-msgid "Products"
-msgstr "Продукты"
-
-#: products/models.py:68
-msgid "Product Price ID"
-msgstr "ID цены на продукты"
-
-#: products/models.py:80
-msgid "Price"
-msgstr "Цена"
-
-#: products/models.py:84
-msgid "Product Price"
-msgstr "Цена на продукт"
-
-#: products/models.py:85
-msgid "Product Prices"
-msgstr "Цены на продукты"
-
-#: products/views.py:104
-msgid "This product is not available in your location."
-msgstr "Этот продукт не доступен в вашем населенном пункте"
-
-#: products/views.py:109
-msgid "You don't have enough points to purchase this product."
-msgstr "У вас на счету не хватает денег"
-
-#: products/views.py:118
-msgid "Congratulations, you have successfully purchased this product."
-msgstr "Поздравляем, Вы успешно купили продукт"
 
 #: support/models.py:12
 msgid "Message ID"
@@ -331,7 +357,7 @@ msgstr "Аватар"
 msgid "Upload"
 msgstr "Загрузить"
 
-#: templates/accounts/profile.html:53 templates/deal/deal_create.html:37
+#: templates/accounts/profile.html:54 templates/deal/deal_create.html:37
 msgid "Save"
 msgstr "Сохранить"
 
@@ -344,7 +370,7 @@ msgstr "Статистика профиля"
 msgid "Profile Information"
 msgstr "Информация профиля"
 
-
+#: templates/accounts/profile_detail.html:21
 msgid "Full Name"
 msgstr "ФИО"
 
@@ -352,23 +378,23 @@ msgstr "ФИО"
 msgid "Email"
 msgstr "Имейл"
 
-
+#: templates/accounts/profile_detail.html:48
 msgid "Birth date"
 msgstr "Дата рождения"
 
+#: templates/accounts/profile_detail.html:57
+msgid "Address"
+msgstr "Адрес"
 
+#: templates/accounts/profile_detail.html:72
 msgid "Total actions"
 msgstr "Населенные пункты"
 
-
+#: templates/accounts/profile_detail.html:83
 msgid "Deals are made"
 msgstr "Сделок совершено"
 
 #: templates/accounts/profile_detail.html:102
-#, fuzzy
-msgid "Invite new user"
-msgstr "Пригласить нового пользователя"
-
 msgid "Invited users"
 msgstr "Приглашено пользователей"
 
@@ -428,6 +454,11 @@ msgstr "Создать новую сделку"
 msgid "No invited users yet"
 msgstr "Приглашенных пользователей пока нет"
 
+#: templates/dashboard/home.html:263
+#, fuzzy
+msgid "Invite new user"
+msgstr "Пригласить нового пользователя"
+
 #: templates/dashboard/home.html:269
 #, fuzzy
 #| msgid "Profile"
@@ -473,6 +504,11 @@ msgstr "Цены"
 #: templates/layouts/sidebar.html:83
 msgid "Raise Support"
 msgstr "Вызов поддержки"
+
+#: templates/products/category_list.html:8
+#: templates/products/category_list.html:15
+msgid "Categoryes"
+msgstr "Категории"
 
 #: templates/products/category_list.html:9
 msgid "List of categoryes product"
@@ -599,6 +635,36 @@ msgstr "Поиск запроса.."
 #: templates/support/ticket_list.html:476
 msgid "No Items Found"
 msgstr "Ничего не найдено"
+
+#~ msgid "Name"
+#~ msgstr "Название"
+
+#~ msgid "Parent"
+#~ msgstr "Исходный"
+
+#~ msgid "Sold Count"
+#~ msgstr "Кол-во проданных"
+
+#~ msgid "Product Price ID"
+#~ msgstr "ID цены на продукты"
+
+#~ msgid "Price"
+#~ msgstr "Цена"
+
+#~ msgid "Product Price"
+#~ msgstr "Цена на продукт"
+
+#~ msgid "Product Prices"
+#~ msgstr "Цены на продукты"
+
+#~ msgid "This product is not available in your location."
+#~ msgstr "Этот продукт не доступен в вашем населенном пункте"
+
+#~ msgid "You don't have enough points to purchase this product."
+#~ msgstr "У вас на счету не хватает денег"
+
+#~ msgid "Congratulations, you have successfully purchased this product."
+#~ msgstr "Поздравляем, Вы успешно купили продукт"
 
 #~ msgid "Referral ID"
 #~ msgstr "ID Реферала"
