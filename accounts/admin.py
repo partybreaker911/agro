@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 
-from accounts.models import CustomUser, Profile, Wallet, UserLocation
+from accounts.models import CustomUser, Profile, Wallet, UserLocation, Transaction
 from accounts.forms import CustomUserCreationForm, CustomUserChangeForm
 
 
@@ -51,3 +51,11 @@ class UserLocationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(UserLocation, UserLocationAdmin)
+
+
+class TransactionAdmin(admin.ModelAdmin):
+    model = Transaction
+    list_display = ["wallet", "value", "timestamp"]
+
+
+admin.site.register(Transaction, TransactionAdmin)

@@ -21,6 +21,7 @@ class DealListView(LoginRequiredMixin, ListView):
     model = Deal
     template_name = "deal/deal_list.html"
     context_object_name = "deals"
+    paginate_by = 10
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -80,3 +81,9 @@ class DealUpdateView(LoginRequiredMixin, UpdateView):
         if not self.request.user.is_superuser:
             del form.fields["approved"]
         return form
+
+
+class ProductPriceListView(LoginRequiredMixin, ListView):
+    model = ProductPrice
+    template_name = "deal/product_price_list.html"
+    paginate_by = 10

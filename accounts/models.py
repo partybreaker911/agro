@@ -168,3 +168,26 @@ class Wallet(models.Model):
 
     def __str__(self) -> str:
         return f"{self.user.username}"
+
+
+class Transaction(models.Model):
+    id = models.UUIDField(
+        _("Transaction ID"),
+        primary_key=True,
+        default=uuid.uuid4,
+        unique=True,
+        editable=False,
+    )
+    wallet = models.ForeignKey(Wallet, on_delete=models.CASCADE)
+    value = models.DecimalField(_("Value"), max_digits=10, decimal_places=2)
+    description = models.CharField(
+        _("Description"), max_length=100, null=True, blank=True
+    )
+    timestamp = models.DateTimeField(_("Timestamp"), auto_now_add=True)
+
+    class Meta:
+        verbose_name = _("Transaction")
+        verbose_name_plural = _("Transactions")
+
+    def __str__(self) -> str:
+        return f"{self.wallet.user} {self.value}"
