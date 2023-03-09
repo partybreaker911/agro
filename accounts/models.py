@@ -180,9 +180,7 @@ class Transaction(models.Model):
     )
     wallet = models.ForeignKey(Wallet, on_delete=models.CASCADE)
     value = models.DecimalField(_("Value"), max_digits=10, decimal_places=2)
-    description = models.CharField(
-        _("Description"), max_length=100, null=True, blank=True
-    )
+    description = models.TextField(_("Description"), null=True, blank=True)
     timestamp = models.DateTimeField(_("Timestamp"), auto_now_add=True)
 
     class Meta:

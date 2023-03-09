@@ -1,13 +1,50 @@
 {% extends 'layouts/master.html' %}
 
-{% load i18n %}
+{% load i18n crispy_forms_tags %}
 
 
 {% block content %}
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" class="btn btn-primary" value="{% trans 'Save' %}">
-    </form>
+<div class="page-heading">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>{% trans 'Transaction create' %}</h3>
+                <p class="text-subtitle text-muted">{% trans 'On this page you can transfer money to user' %}</p>
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Dashboard' %}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{% trans 'Transaction create' %}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section id="multiple-column-form">
+        <div class="row match-height">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">{% trans 'Trasaction form' %}</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form" method="POST">
+                                <div class="row">
+                                    {% csrf_token %}
+                                    {{ form|crispy }}
+                                    <div class="col-12 d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary me-1 mb-1">{% trans 'Save' %}</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock content %}
     
