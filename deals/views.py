@@ -41,12 +41,16 @@ class DealCreateView(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         product = form.cleaned_data["product"]
         user_location = self.request.user.userlocation.location
-        # price = (
-        #     ProductPrice.objects.filter(product=product, location=user_location)
-        #     .first()
-        #     .price
-        # )
-        # quantity = form.cleaned_data["quantity"]
+        price = (
+            ProductPrice.objects.filter(product=product, location=user_location)
+            .first()
+            .price
+        )
+        quantity = form.cleaned_data["quantity"]
+        total_price = float(price) * float(quantity)
+        self.object = form.save(commit=False)
+        self.object.total_price = total_price
+        self.object.save()
         if self.request.user.is_staff:
             pass
             # deal.approved = True
