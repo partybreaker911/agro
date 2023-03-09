@@ -9,7 +9,7 @@ from django.views.generic import (
 )
 from django.urls import reverse_lazy
 
-from deals.models import Deal
+from deals.models import Deal, ProductPrice
 from deals.forms import DealForm
 
 
@@ -29,15 +29,28 @@ class DealListView(LoginRequiredMixin, ListView):
 class DealCreateView(LoginRequiredMixin, CreateView):
     model = Deal
     form_class = DealForm
+    # fields = ["product", "type", "quantity"]
     template_name = "deal/deal_create.html"
     success_url = reverse_lazy("deal_list")
 
     def form_valid(self, form):
-        deal = form.save(commit=False)
+        """
+        TODO: Надо добавить выбор продуктов только тех которые есть в данном регионе и у них есть устновленная цена
+        """
+        # deal = form.save(commit=False)
         form.instance.user = self.request.user
+        product = form.cleaned_data["product"]
+        user_location = self.request.user.userlocation.location
+        # price = (
+        #     ProductPrice.objects.filter(product=product, location=user_location)
+        #     .first()
+        #     .price
+        # )
+        # quantity = form.cleaned_data["quantity"]
         if self.request.user.is_staff:
-            deal.approved = True
-        deal.save()
+            pass
+            # deal.approved = True
+        # deal.save()
         return super().form_valid(form)
 
 

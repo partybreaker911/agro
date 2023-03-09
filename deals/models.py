@@ -29,6 +29,9 @@ class Deal(models.Model):
     )
     quantity = models.PositiveIntegerField(_("Quantity"), default=0)
     type = models.CharField(_("Type"), max_length=1, choices=DEAL_TYPE_CHOICES)
+    total_price = models.DecimalField(
+        _("Total Price"), max_digits=10, decimal_places=2, default=0
+    )
     approved = models.BooleanField(_("Approved"), default=False)
     timestamp = models.DateTimeField(_("Timestamp"), auto_now_add=True)
 
