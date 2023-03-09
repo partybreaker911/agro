@@ -11,6 +11,7 @@ from django.urls import reverse_lazy
 
 from deals.models import Deal, ProductPrice
 from deals.forms import DealForm
+from deals.tasks import create_transaction_task
 
 
 class DealListView(LoginRequiredMixin, ListView):
@@ -43,6 +44,7 @@ class DealCreateView(LoginRequiredMixin, CreateView):
         TODO: Надо добавить выбор продуктов только тех которые есть в данном регионе и у них есть устновленная цена
         """
         # deal = form.save(commit=False)
+        user_id = self.request.user.id
         form.instance.user = self.request.user
         product = form.cleaned_data["product"]
         user_location = self.request.user.userlocation.location
@@ -56,6 +58,11 @@ class DealCreateView(LoginRequiredMixin, CreateView):
         self.object = form.save(commit=False)
         self.object.total_price = total_price
         self.object.save()
+        """
+        TODO: Проверить чуть позже !
+                лень подключать celery
+        """
+        # create_transaction_task.delay(user_id, self.object.id, total_price)
         if self.request.user.is_staff:
             pass
             # deal.approved = True
