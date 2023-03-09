@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 import uuid
 
-from catalogs.models import Product
+from catalogs.models import Product, Location
 
 User = get_user_model()
 
@@ -39,3 +39,26 @@ class Deal(models.Model):
 
     def __str__(self) -> str:
         return f"{self.user} {self.product} {self.quantity} {self.approved}"
+
+
+class ProductPrice(models.Model):
+    id = models.UUIDField(
+        _("ID"), primary_key=True, default=uuid.uuid4, unique=True, editable=False
+    )
+    location = models.ForeignKey(
+        Location, verbose_name=_("Location"), on_delete=models.CASCADE
+    )
+    product = models.ForeignKey(
+        Product, verbose_name=_("Product"), on_delete=models.CASCADE
+    )
+    price = models.DecimalField(_("Price"), max_digits=10, decimal_places=2, default=0)
+    works_until = models.DateTimeField(_("Works Until"), auto_now=False)
+    timestamp = models.DateTimeField(_("Timestamp"), auto_now_add=True)
+
+    class Meta:
+        ordering = ["-timestamp"]
+        verbose_name = _("Product Price")
+        verbose_name_plural = _("Products Prices")
+
+    def __str__(self) -> str:
+        return f"{self.location} {self.product} {self.price}"
