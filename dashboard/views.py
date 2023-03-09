@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import get_user_model
+from django.db.models import Sum
 from accounts.models import Wallet, Profile
 from invitations.models import Invitation
 from deals.models import Deal
@@ -15,6 +16,7 @@ class DashboardView(LoginRequiredMixin, TemplateView):
     def get(self, request):
         wallet = Wallet.objects.get(user=request.user)
         deals = Deal.objects.filter(user=request.user)
+        # deals = Deal.objects.values("product").annotate(total_quantity=Sum("quantity"))
         deal_count = Deal.objects.filter(user=request.user).count()
         invited = Invitation.objects.filter(inviter=request.user).values("email")
         invited_users = Profile.objects.filter(user__email__in=invited)
