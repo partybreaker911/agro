@@ -70,5 +70,5 @@ for i in range(len(data)):
     result_matrix.append(row)
 print(result_matrix)
 # print(result2)
-# df = pd.DataFrame(data, columns=quantity)
-# print(df.to_string(index=False))
+df = pd.DataFrame(result_matrix)
+print(df.to_string(index=False))

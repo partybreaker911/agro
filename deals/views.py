@@ -1,6 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import ListView, CreateView
+from django.views.generic import (
+    ListView,
+    CreateView,
+    DetailView,
+    DeleteView,
+    UpdateView,
+)
 from django.urls import reverse_lazy
 
 from deals.models import Deal
@@ -13,7 +19,10 @@ class DealListView(LoginRequiredMixin, ListView):
     context_object_name = "deals"
 
     def get_queryset(self):
-        return Deal.objects.filter(user=self.request.user)
+        if self.request.user.is_superuser:
+            return Deal.objects.all()
+        else:
+            return Deal.objects.filter(user=self.request.user)
 
 
 class DealCreateView(LoginRequiredMixin, CreateView):
@@ -29,3 +38,17 @@ class DealCreateView(LoginRequiredMixin, CreateView):
             deal.approved = True
         deal.save()
         return super().form_valid(form)
+
+
+class DealDetailView(LoginRequiredMixin, DetailView):
+    model = Deal
+    template_name = "deal/deal_detail.html"
+
+
+class DealDeleteView(LoginRequiredMixin, DeleteView):
+    model = Deal
+
+
+class DealUpdateView(LoginRequiredMixin, UpdateView):
+    model = Deal
+    fields = ["product", "quantity", "type", "approved"]
