@@ -2,7 +2,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth import get_user_model
 
-from accounts.models import Profile, Wallet, UserLocation
+from accounts.models import Profile, Wallet, UserLocation, Transaction
 
 User = get_user_model()
 
@@ -38,3 +38,11 @@ def create_user_location(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_location(sender, instance, **kwargs):
     instance.userlocation.save()
+
+
+@receiver(post_save, sender=Transaction)
+def update_wallet_balance(sender, instance, created, **kwargs):
+    if created:
+        wallet = instance.wallet
+        wallet.balance += instance.value
+        wallet.save()

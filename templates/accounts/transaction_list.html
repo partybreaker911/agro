@@ -1,0 +1,85 @@
+{% extends 'layouts/master.html' %}
+
+{% load i18n %}
+
+{% block content %}
+<div class="page-heading">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>{% trans 'Transaction list' %}</h3>
+                <p class="text-subtitle text-muted">{% trans 'Transaction list' %}</p>
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Dashboard' %}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{% trans 'Transaction list' %}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="row" id="basic-table">
+            <div class="col-12 col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">{% trans 'User transaction table' %}</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="table-responsive table-lg">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>{% trans 'value' %}</th>
+                                            <th>{% trans 'description' %}</th>
+                                            <th>{% trans 'timestamp' %}</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                                    {% for transaction in transactions %}
+                                    <tr>
+                                    {% if request.user.is_superuser %}
+                                        <td class="col-2">
+                                            <span>{{ transaction.value }}</span>
+                                        </td>
+                                    {% endif %}
+                                        <td class="col-2">
+                                            <span class="mb-0">{{ transaction.description }}</span>
+                                        </td>
+                                        <td class="col-auto">
+                                            <span class="mb-0">{{ transaction.timestamp }}</span>
+                                        </td>
+                                        <td class="col-auto">
+                                            <a href="" class="btn btn-primary btn-sm">{% trans 'Detail' %}</a>
+                                        </td>
+                                        <td class="col-auto">
+                                            <a href="" class="btn btn-warning btn-sm">{% trans 'Update' %}</a>
+                                        </td>
+                                        <td class="col-auto">
+                                            <a href="" class="btn btn-danger btn-sm">{% trans 'Delete' %}</a>
+                                        </td>
+                                     </tr>
+                                        {% empty %}
+                                    <tr>
+                                        <td colspan="8" class="col-auto">
+                                            <p class="mb-0 text-center">{% trans 'This user have not any transaction yet!' %}</p>
+                                        </td>
+                                    </tr>
+                                        {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+    

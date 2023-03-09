@@ -1,9 +1,17 @@
 from django.contrib import messages
-from django.views.generic import View, DetailView
+from django.views.generic import (
+    View,
+    DetailView,
+    CreateView,
+    ListView,
+    DeleteView,
+    UpdateView,
+)
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-from accounts.models import Profile, Wallet, UserLocation
+from accounts.models import Profile, Wallet, UserLocation, Transaction
 from accounts.forms import ProfileForm, UserLocationForm
 
 
@@ -47,3 +55,19 @@ class WalletView(LoginRequiredMixin, View):
     def get(self, request):
         wallet = Wallet.objects.get(user=request.user)
         return render(request, "accounts/wallet.html", {"wallet": wallet})
+
+
+class TransactionCreateView(LoginRequiredMixin, CreateView):
+    model = Transaction
+    fields = ["wallet", "value", "description"]
+    template_name = "accounts/transaction_create.html"
+    success_url = reverse_lazy("home")
+
+
+class TransactionListView(LoginRequiredMixin, ListView):
+    model = Transaction
+    context_object_name = "transactions"
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(wallet__user=self.request.user)

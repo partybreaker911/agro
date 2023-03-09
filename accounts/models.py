@@ -186,6 +186,7 @@ class Transaction(models.Model):
     timestamp = models.DateTimeField(_("Timestamp"), auto_now_add=True)
 
     class Meta:
+        ordering = ["-timestamp"]
         verbose_name = _("Transaction")
         verbose_name_plural = _("Transactions")
 
