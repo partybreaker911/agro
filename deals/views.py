@@ -14,6 +14,10 @@ from deals.forms import DealForm
 
 
 class DealListView(LoginRequiredMixin, ListView):
+    """
+    TODO: Добавить поиск по таблице
+    """
+
     model = Deal
     template_name = "deal/deal_list.html"
     context_object_name = "deals"
