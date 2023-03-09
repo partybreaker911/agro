@@ -19,6 +19,8 @@ django-mptt = "*"
 django-autocomplete-light = "*"
 django-invitations = "*"
 pillow = "*"
+numpy = "*"
+pandas = "*"
 
 [dev-packages]
 black = "*"
