@@ -19,10 +19,11 @@ class DealListView(LoginRequiredMixin, ListView):
     context_object_name = "deals"
 
     def get_queryset(self):
+        queryset = super().get_queryset()
         if self.request.user.is_superuser:
-            return Deal.objects.all()
+            return queryset.all()
         else:
-            return Deal.objects.filter(user=self.request.user)
+            return queryset.filter(user=self.request.user)
 
 
 class DealCreateView(LoginRequiredMixin, CreateView):
@@ -52,3 +53,9 @@ class DealDeleteView(LoginRequiredMixin, DeleteView):
 class DealUpdateView(LoginRequiredMixin, UpdateView):
     model = Deal
     fields = ["product", "quantity", "type", "approved"]
+
+    def get_form(self, form_class=None):
+        form = super().get_form(form_class)
+        if not self.request.user.is_superuser:
+            del form.fields["approved"]
+        return form
