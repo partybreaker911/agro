@@ -5,5 +5,9 @@ from django.urls import reverse_lazy
 from catalogs.models import ProductCategory, Product
 
 
-class ProductCategoryView(ListView):
+class CategoryListView(ListView):
     model = ProductCategory
+
+
+class ProductListView(ListView):
+    model = Product

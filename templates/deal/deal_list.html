@@ -20,67 +20,84 @@
             </div>
         </div>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                {% if request.user.is_superuser %}
-                <th>{% trans 'User' %}</th>
-                {% endif %}    
-                <th>{% trans 'Product' %}</th>
-                <th>{% trans 'Type' %}</th>
-                <th>{% trans 'Quantity' %}</th>
-                <th>{% trans 'Approved' %}</th>
-                <th>{% trans 'Timestamp' %}</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for deal in deals %}
-            <tr>
-                {% if request.user.is_superuser %}
-                <td class="col-3">
-                    <span>{{ deal.user }}</span>
-                </td>
-                {% endif %}
-                <td class="col-3">
-                    <span class="mb-0">{{ deal.product }}</span>
-                </td>
-                <td class="col-auto">
-                    <span class="mb-0">{{ deal.type }}</span>
-                </td>
-                <td class="col-auto">
-                    <span class="mb-0">{{ deal.quantity }}</span>
-                </td>
-                <td class="col-auto">
-                {% if deal.approved is True %}
-                    <p class="mb-0"><span class="badge bg-success">{{ deal.approved }}</span></p>
-                {% else %}
-                    <p class="mb-0"><span class="badge bg-danger">{{ deal.approved }}</span></p>
-                {% endif %}
-                </td>
-                <td class="col-auto">
-                    <span class="mb-0">{{ deal.timestamp }}</span>
-                </td>
-                <td class="col-auto">
-                    <a href="{% url 'deal_detail' deal.id %}" class="btn btn-primary btn-sm">{% trans 'Detail' %}</a>
-                </td>
-                <td class="col-auto">
-                    <a href="{% url 'deal_update' deal.id %}" class="btn btn-warning btn-sm">{% trans 'Update' %}</a>
-                </td>
-                <td class="col-auto">
-                    <a href="{% url 'deal_delete' deal.id %}" class="btn btn-danger btn-sm">{% trans 'Delete' %}</a>
-                </td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="8" class="col-auto">
-                    <p class="mb-0 text-center">{% trans 'This user have not any deals yet!' %}</p>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-        
+    <section class="section">
+        <div class="row" id="basic-table">
+            <div class="col-12 col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">{% trans 'User deal table' %}</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="table-responsive table-lg">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            {% if request.user.is_superuser %}
+                                            <th>{% trans 'User' %}</th>
+                                            {% endif %}    
+                                            <th>{% trans 'Product' %}</th>
+                                            <th>{% trans 'Type' %}</th>
+                                            <th>{% trans 'Quantity' %}</th>
+                                            <th>{% trans 'Approved' %}</th>
+                                            <th>{% trans 'Timestamp' %}</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                                    {% for deal in deals %}
+                                    <tr>
+                                    {% if request.user.is_superuser %}
+                                        <td class="col-3">
+                                            <span>{{ deal.user }}</span>
+                                        </td>
+                                    {% endif %}
+                                        <td class="col-3">
+                                            <span class="mb-0">{{ deal.product }}</span>
+                                        </td>
+                                        <td class="col-auto">
+                                            <span class="mb-0">{{ deal.type }}</span>
+                                        </td>
+                                        <td class="col-auto">
+                                            <span class="mb-0">{{ deal.quantity }}</span>
+                                        </td>
+                                        <td class="col-auto">
+                                            {% if deal.approved is True %}
+                                            <p class="mb-0"><span class="badge bg-success">{{ deal.approved }}</span></p>
+                                            {% else %}
+                                            <p class="mb-0"><span class="badge bg-danger">{{ deal.approved }}</span></p>
+                                            {% endif %}
+                                        </td>
+                                        <td class="col-auto">
+                                            <span class="mb-0">{{ deal.timestamp }}</span>
+                                        </td>
+                                        <td class="col-auto">
+                                            <a href="{% url 'deal_detail' deal.id %}" class="btn btn-primary btn-sm">{% trans 'Detail' %}</a>
+                                        </td>
+                                        <td class="col-auto">
+                                            <a href="{% url 'deal_update' deal.id %}" class="btn btn-warning btn-sm">{% trans 'Update' %}</a>
+                                        </td>
+                                        <td class="col-auto">
+                                            <a href="{% url 'deal_delete' deal.id %}" class="btn btn-danger btn-sm">{% trans 'Delete' %}</a>
+                                        </td>
+                                     </tr>
+                                        {% empty %}
+                                    <tr>
+                                        <td colspan="8" class="col-auto">
+                                            <p class="mb-0 text-center">{% trans 'This user have not any deals yet!' %}</p>
+                                        </td>
+                                    </tr>
+                                        {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
     

@@ -1,17 +1,50 @@
 {% extends 'layouts/master.html' %}
 
-{% load mptt_tags %}
+{% load mptt_tags i18n %}
 
 {% block content %}
-        {% recursetree object_list %}
-        <li>
-            {{ node.name }}
-            {% if not node.is_leaf_node %}
-                <ul class="children">
-                    {{ children }}
-                </ul>
-            {% endif %}
-        </li>
-    {% endrecursetree %}
+<div class="page-heading">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>{% trans 'Category' %}</h3>
+                <p class="text-subtitle text-muted">{% trans 'Category' %}</p>
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Dashboard' %}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{% trans 'Category' %}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="site_nav_primary__wrapper">
+        <nav class="site_nav_primary__block">
+            <ul class="site_nav_primary__ul ul__column site_nav_primary__topmenu">
+                <li class="li_inline">
+                    <a class="btn btn__dark" href="" style="letter-spacing: 1px;">
+                        <span class="fa fa-bars"></span>
+                        <span>&nbsp;КАТАЛОГ ТОВАРОВ&nbsp;</span>
+                        <span class="fa fa-angle-down"></span>
+                    </a>
+                    <ul class="site_nav_primary__submenu ul__column white_box">
+                        {% recursetree object_list %}
+                            <li>
+                                <a class="btn btn__light" href="">
+                                    <span style="flex: 1 1 auto;">{{ node.name }}</span>{% if not node.is_leaf_node %}
+                                    <span>&nbsp;</span><span class="fa fa-angle-right"></span>{% endif %}
+                                </a>
+                                {% if not node.is_leaf_node %}
+                                    <ul  class="site_nav_primary__submenu ul__column white_box">
+                                        {{ children }}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endrecursetree %}
+                    </ul>
+                </li>
 {% endblock content %}
     
