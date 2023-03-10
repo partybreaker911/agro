@@ -8,11 +8,15 @@ from django.views.generic import (
     UpdateView,
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from accounts.models import Profile, Wallet, UserLocation, Transaction
+from deals.models import Deal
 from accounts.forms import ProfileForm, UserLocationForm
+
+User = get_user_model()
 
 
 class ProfileView(LoginRequiredMixin, View):
