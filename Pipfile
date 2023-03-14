@@ -21,6 +21,8 @@ django-invitations = "*"
 pillow = "*"
 numpy = "*"
 pandas = "*"
+django-silk = "*"
+django-cprofile-middleware = "*"
 
 [dev-packages]
 black = "*"

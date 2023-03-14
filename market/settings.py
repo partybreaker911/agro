@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "mptt",
     "invitations",
+    "silk",
     # "autocomplete_light",
     # Local apps
     "accounts",
@@ -80,6 +81,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.locale.LocaleMiddleware",
+    "silk.middleware.SilkyMiddleware",
+    "django_cprofile_middleware.middleware.ProfilerMiddleware",
 ]
 
 ROOT_URLCONF = "market.urls"
@@ -264,3 +267,8 @@ EMAIL_USE_SSL = env("EMAIL_USE_SSL")
 # Celery
 CELERY_BROKER_URL = env("CELERY_BROKER_URL")
 CELERY_RESULT_BACKEND = env("CELERY_RESULT_BACKEND")
+
+# DEBUG profiling
+DJANGO_CPROFILE_MIDDLEWARE_REQUIRE_STAFF = env(
+    "DJANGO_CPROFILE_MIDDLEWARE_REQUIRE_STAFF"
+)
